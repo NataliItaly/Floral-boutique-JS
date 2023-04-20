@@ -1,0 +1,150 @@
+@import "./header.css";
+@import "./menu.css";
+@import "./container.css";
+@import "./section.css";
+@import "./start-screen.css";
+@import "./cards.css";
+@import "./slider.css";
+@import "./button.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  transition: 0.6s all ease;
+}
+/*Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a:*/
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #4b4b4b;
+}
+a:hover {
+  color: #efe4ea;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  height: fit-content;
+}
+
+body {
+  margin: 0 auto;
+  color: #40393b;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  display: grid;
+  grid-template-rows: 124px 1fr 183px;
+  background-color: rgb(239 228 234);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0 none;
+  clip-path: inset(100%);
+}
+
+.filter {
+  height: 160px;
+}
+
+.filters-form {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  align-items: center;
+}
+
+.filter-select {
+  width: 100%;
+  height: 59px;
+  background-color: transparent;
+  border: 1px solid #59313b;
+  padding: 0 20px;
+}
+
+.look-more {
+  height: 218px;
+}
+
+.look-more .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  height: 183px;
+  background-color: #f1d7fa;
+}
+
+.footer .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.instagram {
+  background-image: url("../img/social/instagram.svg");
+}
+
+.facebook {
+  background-image: url("../img/social/facebook.svg");
+}
+
+.pinterest {
+  background-image: url("../img/social/pinterest.svg");
+}
+
+.social-link:hover {
+  filter: invert(27%) sepia(8%) saturate(2328%) hue-rotate(294deg)
+    brightness(101%) contrast(85%);
+}

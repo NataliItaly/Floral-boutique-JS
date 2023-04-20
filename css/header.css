@@ -1,0 +1,44 @@
+.header {
+  height: fit-content;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 124px;
+}
+
+.header__logo {
+  font-family: "Tangerine", cursive;
+  font-size: 36px;
+  margin-right: 100px;
+  cursor: pointer;
+  padding: 15px 0 15px 40px;
+  background-image: url("./../img/logo.png");
+  background-size: 50px;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.header__logo:hover {
+}
+
+.header__tel {
+  margin: 0 55px 0 auto;
+}
+
+.header__busket {
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/bag-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__busket:hover {
+  filter: saturate(1.5);
+}

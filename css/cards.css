@@ -1,0 +1,69 @@
+.cards {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 30px;
+  row-gap: 50px;
+}
+
+.cards__item {
+  max-width: 300px;
+  text-align: center;
+  border-radius: 7px;
+  /* display: grid;
+  justify-items: center; */
+  padding: 30px;
+  background-color: #f1d7fa;
+  transition: 0.6s all ease-in-out;
+}
+
+.cards__item:hover {
+  box-shadow: 0 0 10px #dcc2e5;
+}
+
+.cards__item:hover .cards__button {
+  background-color: #f1d7fa;
+  color: #59313b;
+  box-shadow: 0 0 6px #59313b;
+}
+
+.cards__img {
+  grid-row-start: 1;
+  width: 100%;
+  border-radius: 7px;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.cards__title {
+  /* font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 28px;
+  color: #40393b; */
+  margin-bottom: 5px;
+  font-size: 36px;
+  line-height: 60px;
+  font-family: "Tangerine", cursive;
+  color: #59313b;
+}
+
+.cards__button {
+  display: block;
+  background: #59313b;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 10px 20px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  color: #ffffff;
+  margin: 20px auto 10px;
+  transition: 0.6s all ease;
+}
+
+.card-price {
+  margin-bottom: 20px;
+}

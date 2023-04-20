@@ -1,0 +1,14 @@
+.button_secondary {
+  width: 380px;
+  height: 68px;
+  border: 1px solid #59313b;
+  border-radius: 7px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.6s all ease;
+}
+
+.button_secondary:hover {
+  border: none;
+  box-shadow: 0 0 10px #59313b;
+}

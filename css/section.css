@@ -1,0 +1,15 @@
+.section {
+  padding: 40px 0;
+}
+
+.section__title {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 42px;
+  line-height: 1.5;
+  color: #59313b;
+  margin: 20px auto 30px;
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Manipulating the DOM</title>
+    <!-- Load Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">Floral Boutique</div>
+        <nav class="header__menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#moods" class="menu__link">Season mood</a>
+            </li>
+            <li class="menu__item">
+              <a href="#ideas" class="menu__link">Ideas</a>
+            </li>
+            <li class="menu__item">
+              <a href="#catalog" class="menu__link">Catalog</a>
+            </li>
+            <li class="menu__item">
+              <a href="#subscribe" class="menu__link">Subscribe</a>
+            </li>
+            <li class="menu__item">
+              <a href="#contacts" class="menu__link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="tel:+1234566777888" class="header__tel">+ 123 4555 6677</a>
+        <a href="#" class="header__busket"
+          ><span class="visually-hidden">Go to the cart</span></a
+        >
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="section start-screen">
+        <div class="container">
+          <div class="start-screen__text">
+            <h1 class="section__title start-screen__title">Floral Boutique</h1>
+            <p class="start-screen__subtitle">Your best flowers choice</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="moods">
+        <div class="container">
+          <h2 class="section__title">Season's mood</h2>
+          <div class="cards">
+            <div class="cards__item">
+              <h3 class="cards__title">Winter mood</h3>
+              <img src="./img/mood/1.jpg" class="cards__img" alt="bouquet" />
+              <div class="card__text">Lorem ipsum dolor sit amet laborum</div>
+              <a href="" class="cards__button">See about winter flowers</a>
+            </div>
+            <div class="cards__item">
+              <h3 class="cards__title">Spring mood</h3>
+              <img src="./img/mood/2.jpg" class="cards__img" alt="bouquet" />
+              <div class="card__text">Lorem ipsum dolor sit amet laborum</div>
+              <a href="" class="cards__button">See about spring flowers</a>
+            </div>
+            <div class="cards__item">
+              <h3 class="cards__title">Summer mood</h3>
+              <img src="./img/mood/3.jpg" class="cards__img" alt="bouquet" />
+              <div class="card__text">Lorem ipsum dolor sit amet laborum</div>
+              <a href="" class="cards__button">See about summer flowers</a>
+            </div>
+            <div class="cards__item">
+              <h3 class="cards__title">Autumn mood</h3>
+              <img src="./img/mood/4.jpg" class="cards__img" alt="bouquet" />
+              <div class="card__text">
+                Lorem ipsum dolor sit amet laborum amenem iptum
+              </div>
+              <a href="" class="cards__button">See about autumn flowers</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="#ideas">
+        <div class="container">
+          <div class="slider"></div>
+        </div>
+      </section>
+
+      <section class="section filter">
+        <div class="container">
+          <form class="filters-form" action="#" method="get">
+            <label class="visually-hidden" for="category"
+              >Сортировать по категориям</label
+            >
+            <select class="filter filter-select" id="category" name="category">
+              <option value="category">Категория</option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+
+            <label class="visually-hidden" for="flower"
+              >Сортировать по цветам</label
+            >
+            <select class="filter filter-select" id="flower" name="flower">
+              <option value="flower">Цветы</option>
+              <option value="">Roses</option>
+              <option value="">Tulips</option>
+              <option value="">Dry Flowers</option>
+              <option value="">Sunflowers</option>
+              <option value="">Daisy</option>
+              <option value="">Gerberas</option>
+              <option value="">Peony</option>
+            </select>
+
+            <label class="visually-hidden" for="price"
+              >Сортировать по цене</label
+            >
+            <select class="filter filter-select" id="price" name="price">
+              <option value="price">Цена</option>
+              <option value="">less $50</option>
+              <option value="">$50 and more</option>
+            </select>
+          </form>
+        </div>
+      </section>
+
+      <section class="section" id="#catalog">
+        <div class="container">
+          <h2 class="visually-hidden">Каталог цветов</h2>
+          <ul class="cards">
+            <li class="cards__item">
+              <!--<a href="" class="cards__link">-->
+              <h3 class="cards__title">Bouquet Spring</h3>
+              <img src="img/cards/1.card.jpg" alt="" class="cards__img" />
+              <p class="card-price">25$</p>
+              <button class="cards__button">Order</button>
+              <!--</a>-->
+            </li>
+            <li class="cards__item">
+              <!--<a href="" class="cards__link">-->
+              <h3 class="cards__title">Bouquet Confession</h3>
+              <img src="img/cards/2.card.jpg" alt="" class="cards__img" />
+              <p class="card-price">40$</p>
+              <button class="cards__button">Order</button>
+              <!--</a>-->
+            </li>
+            <li class="cards__item">
+              <!--<a href="" class="cards__link">-->
+              <h3 class="cards__title">Bouquet Surprise</h3>
+              <img src="img/cards/3.card.jpg" alt="" class="cards__img" />
+              <p class="card-price">20$</p>
+              <button class="cards__button">Order</button>
+              <!--</a>-->
+            </li>
+            <li class="cards__item">
+              <!--<a href="" class="cards__link">-->
+              <h3 class="cards__title">Bouquet April</h3>
+              <img src="img/cards/4.card.jpg" alt="" class="cards__img" />
+              <p class="card-price">30$</p>
+              <button class="cards__button">Order</button>
+              <!--</a>-->
+            </li>
+            <li class="cards__item">
+              <!--<a href="" class="cards__link">-->
+              <h3 class="cards__title">Bouquet of Dried flowers</h3>
+              <img src="img/cards/5.card.jpg" alt="" class="cards__img" />
+              <p class="card-price">15$</p>
+              <button class="cards__button">Order</button>
+              <!--</a>-->
+            </li>
+            <li class="cards__item">
+              <!--<a href="" class="cards__link">-->
+              <h3 class="cards__title">Bouquet Tenderness</h3>
+              <img src="img/cards/6.card.jpg" alt="" class="cards__img" />
+              <p class="card-price">40$</p>
+              <button class="cards__button">Order</button>
+              <!--</a>-->
+            </li>
+            <li class="cards__item">
+              <!--<a href="" class="cards__link">-->
+              <h3 class="cards__title">Bouquet Brilliance</h3>
+              <img src="img/cards/7.card.jpg" alt="" class="cards__img" />
+              <p class="card-price">40$</p>
+              <button class="cards__button">Order</button>
+              <!--</a>-->
+            </li>
+            <li class="cards__item">
+              <!--<a href="" class="cards__link">-->
+              <h3 class="cards__title">Bouquet Love</h3>
+              <img src="img/cards/8.card.jpg" alt="" class="cards__img" />
+              <p class="card-price">50$</p>
+              <button class="cards__button">Order</button>
+              <!--</a>-->
+            </li>
+            <li class="cards__item">
+              <!--<a href="" class="cards__link">-->
+              <h3 class="cards__title">Bouquet Affection</h3>
+              <img src="img/cards/9.card.jpg" alt="" class="cards__img" />
+              <p class="card-price">50$</p>
+              <button class="cards__button">Order</button>
+              <!--</a>-->
+            </li>
+          </ul>
+          <button class="button_secondary">See more</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="#contacts">
+      <div class="container">
+        <div class="logo"></div>
+        <div class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#moods" class="menu__link">Season Mood</a>
+            </li>
+            <li class="menu__item">
+              <a href="#ideas" class="menu__link">Ideas</a>
+            </li>
+            <li class="menu__item">
+              <a href="#catalog" class="menu__link">Catalog</a>
+            </li>
+            <li class="menu__item">
+              <a href="#subscribe" class="menu__link">Subscribe</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="social">
+          <li class="social-item">
+            <a
+              href="https://www.instagram.com/"
+              class="social-link instagram"
+            ></a>
+          </li>
+          <li class="social-item">
+            <a
+              href="https://www.facebook.com/"
+              class="social-link facebook"
+            ></a>
+          </li>
+          <li class="social-item">
+            <a
+              href="https://www.pinterest.com/"
+              class="social-link pinterest"
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+.start-screen {
+  height: 350px;
+  background-image: url("../img/start-screen-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.start-screen__title {
+  /* font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #59313b; */
+  font-size: 62px;
+  margin: 0;
+}
+
+.start-screen__text {
+  padding: 100px 20px 20px;
+  text-align: left;
+}
+
+.start-screen__subtitle {
+  font-size: 36px;
+  line-height: 60px;
+  font-family: "Tangerine", cursive;
+  color: #59313b;
+}
