@@ -1,0 +1,25 @@
+.logo {
+  font-family: "Tangerine", cursive;
+  font-size: 36px;
+  color: #59313b;
+  margin-right: 100px;
+  cursor: pointer;
+  padding: 15px 0 15px 40px;
+  background-size: 50px;
+  background-position: left;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+}
+
+.logo__header {
+  background-image: url("./../img/header-logo.png");
+}
+
+.logo__footer {
+  background-image: url("./../img/footer-logo.png");
+}
+
+.logo:hover {
+  filter: saturate(1.4);
+  color: #7d4956;
+}

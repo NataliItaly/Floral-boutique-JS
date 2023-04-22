@@ -2,43 +2,38 @@
   height: fit-content;
 }
 
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 124px;
+.header__icon {
+  color: transparent;
 }
 
-.header__logo {
-  font-family: "Tangerine", cursive;
-  font-size: 36px;
-  margin-right: 100px;
-  cursor: pointer;
-  padding: 15px 0 15px 40px;
-  background-image: url("./../img/logo.png");
-  background-size: 50px;
-  background-position: left;
-  background-repeat: no-repeat;
-}
-
-.header__logo:hover {
+.header__icon:hover {
+  color: #9f6d88;
 }
 
 .header__tel {
-  margin: 0 55px 0 auto;
-}
-
-.header__busket {
   width: 25px;
   height: 25px;
-  background-image: url("../img/bag-icon.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: transparent;
-  cursor: pointer;
+  /* background: center / contain no-repeat url(./../img/phone-icon.svg); */
+  color: #59313b;
+  margin-right: 30px;
 }
 
-.header__busket:hover {
-  filter: saturate(1.5);
+.header__card {
+  width: 25px;
+  height: 25px;
+  /* background-image: url("../img/bag-icon.svg"); */
+  /* background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent; */
+  cursor: pointer;
+  /* color: #59313b; */
+}
+
+.header__card:hover {
+  color: #efe4ea;
+}
+
+.header__svg {
+  width: 24px;
+  height: 24px;
 }

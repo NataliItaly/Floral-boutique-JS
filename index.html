@@ -23,10 +23,10 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header__logo">Floral Boutique</div>
-        <nav class="header__menu">
-          <ul class="menu__list">
+      <div class="container container__flex_row">
+        <div class="logo logo__header">Floral Boutique</div>
+        <nav class="menu" id="header-menu">
+          <!-- <ul class="menu__list">
             <li class="menu__item">
               <a href="#moods" class="menu__link">Season mood</a>
             </li>
@@ -42,12 +42,23 @@
             <li class="menu__item">
               <a href="#contacts" class="menu__link">Contacts</a>
             </li>
-          </ul>
+          </ul> -->
         </nav>
-        <a href="tel:+1234566777888" class="header__tel">+ 123 4555 6677</a>
-        <a href="#" class="header__busket"
-          ><span class="visually-hidden">Go to the cart</span></a
-        >
+        <div class="header__icon">
+          <a href="tel:+1234566777888" class="header__icon header__tel"
+            ><span class="visually-hidden">Call us</span>
+            <svg class="header__svg">
+              <use href="./img/sprite.svg#tel"></use>
+            </svg>
+          </a>
+
+          <a href="#" class="header__icon header__card"
+            ><span class="visually-hidden">Go to the cart</span>
+            <svg class="header__svg">
+              <use href="./img/sprite.svg#card"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </header>
 
@@ -65,167 +76,270 @@
         <div class="container">
           <h2 class="section__title">Season's mood</h2>
           <div class="cards">
-            <div class="cards__item">
-              <h3 class="cards__title">Winter mood</h3>
-              <img src="./img/mood/1.jpg" class="cards__img" alt="bouquet" />
-              <div class="card__text">Lorem ipsum dolor sit amet laborum</div>
-              <a href="" class="cards__button">See about winter flowers</a>
-            </div>
-            <div class="cards__item">
-              <h3 class="cards__title">Spring mood</h3>
-              <img src="./img/mood/2.jpg" class="cards__img" alt="bouquet" />
-              <div class="card__text">Lorem ipsum dolor sit amet laborum</div>
-              <a href="" class="cards__button">See about spring flowers</a>
-            </div>
-            <div class="cards__item">
-              <h3 class="cards__title">Summer mood</h3>
-              <img src="./img/mood/3.jpg" class="cards__img" alt="bouquet" />
-              <div class="card__text">Lorem ipsum dolor sit amet laborum</div>
-              <a href="" class="cards__button">See about summer flowers</a>
-            </div>
-            <div class="cards__item">
-              <h3 class="cards__title">Autumn mood</h3>
-              <img src="./img/mood/4.jpg" class="cards__img" alt="bouquet" />
-              <div class="card__text">
-                Lorem ipsum dolor sit amet laborum amenem iptum
+            <!-- <div class="cards__item cards__item_rotate">
+              <div class="cards__side cards__side_front">
+                <h3 class="cards__title">Winter mood</h3>
+                <img
+                  src="./img/mood/1.jpg"
+                  class="cards__img cards__img_rotate"
+                  alt="bouquet"
+                />
               </div>
-              <a href="" class="cards__button">See about autumn flowers</a>
+              <div class="cards__side cards__side_back">
+                <div class="card__text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ipsum id illo eaque, repellat sunt ex est mollitia natus
+                    tempore assumenda voluptas, sit nobis, reiciendis accusamus
+                    omnis delectus illum impedit tenetur.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                    nesciunt culpa numquam sequi enim asperiores, velit natus,
+                    sunt autem aliquam animi earum ullam accusamus consequatur
+                    quibusdam, nihil pariatur modi vitae?
+                  </p>
+                </div>
+                <a href="" class="cards__button cards__button_back"
+                  >See about winter flowers</a
+                >
+              </div>
             </div>
+            <div class="cards__item cards__item_rotate">
+              <div class="cards__side cards__side_front">
+                <h3 class="cards__title">Spring mood</h3>
+                <img
+                  src="./img/mood/2.jpg"
+                  class="cards__img cards__img_rotate"
+                  alt="bouquet"
+                />
+              </div>
+              <div class="cards__side cards__side_back">
+                <div class="card__text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ipsum id illo eaque, repellat sunt ex est mollitia natus
+                    tempore assumenda voluptas, sit nobis, reiciendis accusamus
+                    omnis delectus illum impedit tenetur.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                    nesciunt culpa numquam sequi enim asperiores, velit natus,
+                    sunt autem aliquam animi earum ullam accusamus consequatur
+                    quibusdam, nihil pariatur modi vitae?
+                  </p>
+                </div>
+                <a href="" class="cards__button cards__button_back"
+                  >See about spring flowers</a
+                >
+              </div>
+            </div>
+            <div class="cards__item cards__item_rotate">
+              <div class="cards__side cards__side_front">
+                <h3 class="cards__title">Summer mood</h3>
+                <img
+                  src="./img/mood/3.jpg"
+                  class="cards__img cards__img_rotate"
+                  alt="bouquet"
+                />
+              </div>
+              <div class="cards__side cards__side_back">
+                <div class="card__text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                    nesciunt culpa numquam sequi enim asperiores, velit natus,
+                    sunt autem aliquam animi earum ullam accusamus consequatur
+                    quibusdam, nihil pariatur modi vitae.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                    nesciunt culpa numquam sequi enim asperiores, velit natus,
+                    sunt autem aliquam animi earum ullam accusamus consequatur
+                    quibusdam, nihil pariatur modi vitae?
+                  </p>
+                </div>
+                <a href="" class="cards__button cards__button_back"
+                  >See about summer flowers</a
+                >
+              </div>
+            </div>
+            <div class="cards__item cards__item_rotate">
+              <div class="cards__side cards__side_front">
+                <h3 class="cards__title">Autumn mood</h3>
+                <img
+                  src="./img/mood/4.jpg"
+                  class="cards__img cards__img_rotate"
+                  alt="bouquet"
+                />
+              </div>
+              <div class="cards__side cards__side_back">
+                <div class="card__text">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Excepturi quisquam eveniet inventore quis mollitia voluptate
+                    quos vero, officia porro repellendus optio et delectus sed
+                    quo tempora dicta iusto, qui voluptatum.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                    nesciunt culpa numquam sequi enim asperiores, velit natus,
+                    sunt autem aliquam animi earum ullam accusamus consequatur
+                    quibusdam, nihil pariatur modi vitae?
+                  </p>
+                </div>
+                <a href="" class="cards__button cards__button_back"
+                  >See about autumn flowers</a
+                >
+              </div>
+            </div> -->
           </div>
         </div>
       </section>
 
-      <section class="section" id="#ideas">
-        <div class="container">
-          <div class="slider"></div>
-        </div>
-      </section>
-
-      <section class="section filter">
-        <div class="container">
-          <form class="filters-form" action="#" method="get">
-            <label class="visually-hidden" for="category"
-              >Сортировать по категориям</label
-            >
-            <select class="filter filter-select" id="category" name="category">
-              <option value="category">Категория</option>
-              <option value=""></option>
-              <option value=""></option>
-            </select>
-
-            <label class="visually-hidden" for="flower"
-              >Сортировать по цветам</label
-            >
-            <select class="filter filter-select" id="flower" name="flower">
-              <option value="flower">Цветы</option>
-              <option value="">Roses</option>
-              <option value="">Tulips</option>
-              <option value="">Dry Flowers</option>
-              <option value="">Sunflowers</option>
-              <option value="">Daisy</option>
-              <option value="">Gerberas</option>
-              <option value="">Peony</option>
-            </select>
-
-            <label class="visually-hidden" for="price"
-              >Сортировать по цене</label
-            >
-            <select class="filter filter-select" id="price" name="price">
-              <option value="price">Цена</option>
-              <option value="">less $50</option>
-              <option value="">$50 and more</option>
-            </select>
-          </form>
+      <section class="section section__ideas" id="#ideas">
+        <div class="container container__slider">
+          <h2 class="section__title">Ideas</h2>
+          <div class="slider">
+            <div class="slider__inner"></div>
+            <button class="slider__btn slider__btn_prev" title="previous slide">
+              &lt;
+            </button>
+            <button class="slider__btn slider__btn_next" title="next slide">
+              &gt;
+            </button>
+          </div>
         </div>
       </section>
 
       <section class="section" id="#catalog">
         <div class="container">
-          <h2 class="visually-hidden">Каталог цветов</h2>
-          <ul class="cards">
-            <li class="cards__item">
-              <!--<a href="" class="cards__link">-->
+          <h2 class="section__title">Floral Catalog</h2>
+          <form class="filters" action="#" method="get">
+            <div class="filters__wrapper">
+              <button
+                class="filters__select"
+                id="colors-filter"
+                name="colors-filter"
+              >
+                Sort by colors
+              </button>
+              <ul class="filters__list" data-category="colors-filter">
+                <li class="filters__option" data-value="pink">Pink</li>
+                <li class="filters__option" data-value="violet">Violet</li>
+                <li class="filters__option" data-value="yellow">Yellow</li>
+                <li class="filters__option" data-value="red">Red</li>
+                <li class="filters__option" data-value="white">White</li>
+                <li class="filters__option" data-value="orange">Orange</li>
+              </ul>
+            </div>
+            <div class="filters__wrapper">
+              <button
+                class="filters__select"
+                id="flowers-filter"
+                name="flowers-filter"
+              >
+                Sort by flowers
+              </button>
+              <ul class="filters__list" data-category="flowers-filters">
+                <li class="filters__option" data-value="flower">Цветы</li>
+                <li class="filters__option" data-value="">Roses</li>
+                <li class="filters__option" data-value="">Tulips</li>
+                <li class="filters__option" data-value="">Dry Flowers</li>
+                <li class="filters__option" data-value="">Sunflowers</li>
+                <li class="filters__option" data-value="">Daisy</li>
+                <li class="filters__option" data-value="">Gerberas</li>
+                <li class="filters__option" data-value="">Peony</li>
+              </ul>
+            </div>
+            <div class="filters__wrapper">
+              <button
+                class="filters__select"
+                id="price-filter"
+                name="price-filter"
+              >
+                Сортировать по цене
+              </button>
+              <ul class="filters__list" data-category="prices-filter">
+                <li class="filters__option" data-value="price">Цена</li>
+                <li class="filters__option" data-value="low-price">
+                  less than $30
+                </li>
+                <li class="filters__option" data-value="middle-price">
+                  from $30 to $60
+                </li>
+                <li class="filters__option" data-value="high-price">
+                  more than $60
+                </li>
+              </ul>
+            </div>
+          </form>
+
+          <ul class="cards cards_catalog">
+            <!-- <li class="cards__item cards__item_catalog">
               <h3 class="cards__title">Bouquet Spring</h3>
-              <img src="img/cards/1.card.jpg" alt="" class="cards__img" />
-              <p class="card-price">25$</p>
+              <img src="img/cards/1.jpg" alt="" class="cards__img" />
+              <p class="card__price">25$</p>
               <button class="cards__button">Order</button>
-              <!--</a>-->
             </li>
-            <li class="cards__item">
-              <!--<a href="" class="cards__link">-->
+            <li class="cards__item cards__item_catalog">
               <h3 class="cards__title">Bouquet Confession</h3>
-              <img src="img/cards/2.card.jpg" alt="" class="cards__img" />
-              <p class="card-price">40$</p>
+              <img src="img/cards/2.jpg" alt="" class="cards__img" />
+              <p class="card__price">40$</p>
               <button class="cards__button">Order</button>
-              <!--</a>-->
             </li>
-            <li class="cards__item">
-              <!--<a href="" class="cards__link">-->
+            <li class="cards__item cards__item_catalog">
               <h3 class="cards__title">Bouquet Surprise</h3>
-              <img src="img/cards/3.card.jpg" alt="" class="cards__img" />
-              <p class="card-price">20$</p>
+              <img src="img/cards/3.jpg" alt="" class="cards__img" />
+              <p class="card__price">20$</p>
               <button class="cards__button">Order</button>
-              <!--</a>-->
             </li>
-            <li class="cards__item">
-              <!--<a href="" class="cards__link">-->
+            <li class="cards__item cards__item_catalog">
               <h3 class="cards__title">Bouquet April</h3>
-              <img src="img/cards/4.card.jpg" alt="" class="cards__img" />
-              <p class="card-price">30$</p>
+              <img src="img/cards/4.jpg" alt="" class="cards__img" />
+              <p class="card__price">30$</p>
               <button class="cards__button">Order</button>
-              <!--</a>-->
             </li>
-            <li class="cards__item">
-              <!--<a href="" class="cards__link">-->
+            <li class="cards__item cards__item_catalog">
               <h3 class="cards__title">Bouquet of Dried flowers</h3>
-              <img src="img/cards/5.card.jpg" alt="" class="cards__img" />
-              <p class="card-price">15$</p>
+              <img src="img/cards/5.jpg" alt="" class="cards__img" />
+              <p class="card__price">15$</p>
               <button class="cards__button">Order</button>
-              <!--</a>-->
             </li>
-            <li class="cards__item">
-              <!--<a href="" class="cards__link">-->
+            <li class="cards__item cards__item_catalog">
               <h3 class="cards__title">Bouquet Tenderness</h3>
-              <img src="img/cards/6.card.jpg" alt="" class="cards__img" />
-              <p class="card-price">40$</p>
+              <img src="img/cards/6.jpg" alt="" class="cards__img" />
+              <p class="card__price">40$</p>
               <button class="cards__button">Order</button>
-              <!--</a>-->
             </li>
-            <li class="cards__item">
-              <!--<a href="" class="cards__link">-->
+            <li class="cards__item cards__item_catalog">
               <h3 class="cards__title">Bouquet Brilliance</h3>
-              <img src="img/cards/7.card.jpg" alt="" class="cards__img" />
-              <p class="card-price">40$</p>
+              <img src="img/cards/7.jpg" alt="" class="cards__img" />
+              <p class="card__price">40$</p>
               <button class="cards__button">Order</button>
-              <!--</a>-->
             </li>
-            <li class="cards__item">
-              <!--<a href="" class="cards__link">-->
+            <li class="cards__item cards__item_catalog">
               <h3 class="cards__title">Bouquet Love</h3>
-              <img src="img/cards/8.card.jpg" alt="" class="cards__img" />
-              <p class="card-price">50$</p>
+              <img src="img/cards/8.jpg" alt="" class="cards__img" />
+              <p class="card__price">50$</p>
               <button class="cards__button">Order</button>
-              <!--</a>-->
             </li>
-            <li class="cards__item">
-              <!--<a href="" class="cards__link">-->
+            <li class="cards__item cards__item_catalog">
               <h3 class="cards__title">Bouquet Affection</h3>
-              <img src="img/cards/9.card.jpg" alt="" class="cards__img" />
-              <p class="card-price">50$</p>
+              <img src="img/cards/9.jpg" alt="" class="cards__img" />
+              <p class="card__price">50$</p>
               <button class="cards__button">Order</button>
-              <!--</a>-->
-            </li>
+            </li> -->
           </ul>
-          <button class="button_secondary">See more</button>
+          <button class="button_secondary" id="catalog-button">See more</button>
         </div>
       </section>
     </main>
 
     <footer class="footer" id="#contacts">
       <div class="container">
-        <div class="logo"></div>
-        <div class="menu">
-          <ul class="menu__list">
+        <div class="logo logo__footer">Floral Boutique</div>
+        <div class="menu" id="footer-menu">
+          <!-- <ul class="menu__list">
             <li class="menu__item">
               <a href="#moods" class="menu__link">Season Mood</a>
             </li>
@@ -238,7 +352,7 @@
             <li class="menu__item">
               <a href="#subscribe" class="menu__link">Subscribe</a>
             </li>
-          </ul>
+          </ul> -->
         </div>
         <ul class="social">
           <li class="social-item">
@@ -262,5 +376,11 @@
         </ul>
       </div>
     </footer>
+
+    <script src="js/slider.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/mood-cards.js"></script>
+    <script src="js/bouquets.js"></script>
   </body>
 </html>

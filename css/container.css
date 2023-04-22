@@ -9,3 +9,15 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.container__flex_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 124px;
+}
+
+.container__slider {
+  padding: 0;
+}

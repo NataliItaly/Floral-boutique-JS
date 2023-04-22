@@ -7,4 +7,11 @@
 
 .menu__link {
   color: #40393b;
+  font-family: "Merriweather";
+  padding: 5px;
+  transition: 0.4s;
+}
+
+.menu__link:hover {
+  color: #7d4956;
 }

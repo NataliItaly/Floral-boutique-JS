@@ -1,11 +1,14 @@
 .button_secondary {
+  display: block;
   width: 380px;
   height: 68px;
+  font-size: 16px;
   border: 1px solid #59313b;
   border-radius: 7px;
   background-color: transparent;
+  margin: 60px auto 70px;
   cursor: pointer;
-  transition: 0.6s all ease;
+  transition: 0.4s all ease;
 }
 
 .button_secondary:hover {

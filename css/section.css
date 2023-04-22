@@ -2,6 +2,10 @@
   padding: 40px 0;
 }
 
+.section__ideas {
+  background-color: #e8caf3;
+}
+
 .section__title {
   width: -moz-fit-content;
   width: fit-content;
