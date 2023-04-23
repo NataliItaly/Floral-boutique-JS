@@ -1,10 +1,4 @@
 const moodArr = ["winter", "spring", "summer", "autumn"];
-const links = [
-  "https://www.gardenersworld.com/plants/winter-flowering-plants-for-december/",
-  "https://www.gardenersworld.com/search/?q=spring+flowers",
-  "https://www.gardenersworld.com/search/?q=summer+flowers",
-  "https://www.gardenersworld.com/search/?q=autumn+flowers",
-];
 const moodCards = document.querySelector(".cards");
 
 for (let i = 0; i < moodArr.length; i++) {
@@ -12,7 +6,7 @@ for (let i = 0; i < moodArr.length; i++) {
 }
 
 function createMoodCards(arr, num) {
-  const card = document.createElement("div");
+  const card = document.createElement("li");
   card.classList.add("cards__item", "cards__item_rotate");
   cardName = arr[num][0].toUpperCase() + arr[num].slice(1);
   card.innerHTML = `

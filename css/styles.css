@@ -9,6 +9,7 @@
 @import "./footer.css";
 @import "./logo.css";
 @import "./filters.css";
+@import "./bouquet-popup.css";
 
 html {
   scroll-behavior: smooth;
@@ -20,10 +21,11 @@ html {
   padding: 0;
   margin: 0;
   border: 0;
+  background-color: transparent;
   box-sizing: border-box;
   transition: 0.3s all ease;
 }
-/*Универсальное решение, которое убирает подсветку во всех браузерах и не только на input, но и на других элементах, в том числе select, button, a:*/
+
 :active,
 :hover,
 :focus {
@@ -47,8 +49,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: inherit;
-  font-size: inherit;
+  color: #59313b;
+  line-height: 1.5;
 }
 
 html,

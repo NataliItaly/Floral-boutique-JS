@@ -7,11 +7,6 @@
 }
 
 .start-screen__title {
-  /* font-family: "Merriweather";
-  font-style: normal;
-  font-weight: 300;
-  line-height: 1.5;
-  color: #59313b; */
   font-size: 62px;
   margin: 0;
   animation-name: moveToRight;

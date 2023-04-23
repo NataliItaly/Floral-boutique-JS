@@ -1,0 +1,92 @@
+.bouquet-popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(197, 141, 145, 0.716);
+  z-index: 10;
+}
+
+.bouquet-popup__inner {
+  max-width: 80%;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 7px;
+  background-color: #fff;
+  position: relative;
+}
+
+.bouquet-popup__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bouquet-popup__title {
+  font-family: "Merriweather";
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.bouquet-popup__close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #59313b;
+}
+
+.bouquet-popup__close:hover {
+  color: #995c6b;
+}
+
+.bouquet-popup__subtitle {
+  font-family: "Tangerine", cursive;
+  color: #59313b;
+  font-size: 30px;
+}
+
+.bouquet-popup__content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.bouquet-popup__img {
+  width: calc(50% - 20px);
+  max-width: 400px;
+}
+
+.bouquet-popup__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 40px;
+}
+
+.bouquet-popup__btn {
+  border: #59313b;
+  color: #59313b;
+  font-size: 45px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.bouquet-popup__total {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.bouquet-popup__span {
+  font-size: 24px;
+}

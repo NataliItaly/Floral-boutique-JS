@@ -61,7 +61,7 @@ const bouquets = [
   { name: "Original", price: "40", tags: ["white", "yellow", "poppy"] },
   { name: "Exrtreme", price: "50", tags: ["red", "poppy"] },
   {
-    name: "Enygma",
+    name: "Enigma",
     price: "35",
     tags: ["lily", "carnation", "red", "white"],
   },
@@ -87,22 +87,38 @@ const catalogBtn = document.querySelector("#catalog-button");
 let isAllCards = false;
 
 function createCatalogCard(num) {
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < num; i++) {
     const item = document.createElement("li");
     item.classList.add("cards__item", "cards__item_catalog");
+    item.setAttribute("data-bouquet", `${bouquets[i].name}`);
     item.innerHTML = `
-      <h3 class="cards__title">Bouquet ${bouquets[num].name}</h3>
-      <img src="img/cards/${i + 1}.jpg" alt="Bouquet ${
-      bouquets[num].name
-    } picture" class="cards__img" />
-      p class="card__price">${bouquets[num].price}$</p>
+      <h3 class="cards__title">Bouquet ${bouquets[i].name}</h3>
+      <img src="img/cards/${bouquets[i].name}.jpg" alt="Bouquet ${bouquets[i].name} picture" class="cards__img" />
+      <p class="card__price">${bouquets[i].price}$</p>
       <button class="cards__button">Order</button>
     `;
+
+    item.addEventListener("click", function (event) {
+      console.log(event.target);
+      if (event.target.closest(".cards__item")) {
+        console.log(event.target.closest(".cards__item").dataset.bouquet);
+        let choosenCard = event.target.closest(".cards__item").dataset.bouquet;
+        let choosenIndex;
+        bouquets.forEach((bouquet, index) => {
+          if (choosenCard === bouquet.name) {
+            console.log(index);
+            choosenIndex = index;
+          }
+        });
+
+        createPopup(choosenIndex);
+      }
+    });
     catalog.append(item);
   }
 }
 
-createCatalogCard(bouquets.length);
+createCatalogCard(9);
 
 catalogBtn.addEventListener("click", function () {
   if (!isAllCards) {
