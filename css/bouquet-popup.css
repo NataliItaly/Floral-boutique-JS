@@ -8,17 +8,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(197, 141, 145, 0.716);
+  background-color: rgba(197, 141, 145, 0.6);
   z-index: 10;
+}
+
+@keyframes bouquet-popup {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bouquet-popup-close {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 
 .bouquet-popup__inner {
   max-width: 80%;
   margin: 20px;
-  padding: 20px;
+  padding: 30px;
   border-radius: 7px;
   background-color: #fff;
   position: relative;
+  animation: bouquet-popup 0.6s;
+}
+
+.bouquet-popup__inner_close {
+  animation: bouquet-popup-close 0.6s;
 }
 
 .bouquet-popup__header {
@@ -44,7 +67,8 @@
 }
 
 .bouquet-popup__close:hover {
-  color: #995c6b;
+  background-color: #efe4ea;
+  border-radius: 3px;
 }
 
 .bouquet-popup__subtitle {
@@ -74,19 +98,39 @@
 }
 
 .bouquet-popup__btn {
-  border: #59313b;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #59313b;
   font-size: 45px;
-  padding: 5px;
+  padding: 0 10px;
   cursor: pointer;
 }
 
-.bouquet-popup__total {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.bouquet-popup__btn:first-of-type {
+  padding-bottom: 5px;
+}
+
+.bouquet-popup__btn:hover {
+  background-color: #efe4ea;
+  border-radius: 3px;
+}
+
+.bouquet-popup__btn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.bouquet-popup__btn:disabled:hover {
+  background-color: transparent;
 }
 
 .bouquet-popup__span {
   font-size: 24px;
+}
+
+.bouquet-popup__count {
+  font-size: 18px;
 }

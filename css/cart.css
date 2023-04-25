@@ -1,0 +1,51 @@
+.cart {
+  max-width: 400px;
+  min-width: 320px;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  background-color: #fbf9fa;
+  /* transform: translateY(-200%); */
+}
+
+.cart__title {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #59313b;
+  margin-bottom: 30px;
+}
+
+.cart__list {
+  margin-bottom: 30px;
+}
+
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.cart__item-img {
+  align-self: flex-start;
+  border: 1px solid #59313b;
+}
+
+.cart__img {
+  width: 117px;
+  height: 100px;
+}
+
+.cart__item-price {
+}
+
+.cart__total {
+  display: flex;
+  justify-content: space-between;
+}

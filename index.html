@@ -26,7 +26,7 @@
       <div class="container container__flex_row">
         <div class="logo logo__header">Floral Boutique</div>
         <nav class="menu" id="header-menu"></nav>
-        <div class="header__icon">
+        <div class="header__icons">
           <a href="tel:+1234566777888" class="header__icon header__tel"
             ><span class="visually-hidden">Call us</span>
             <svg class="header__svg">
@@ -34,12 +34,33 @@
             </svg>
           </a>
 
-          <a href="#" class="header__icon header__card"
-            ><span class="visually-hidden">Go to the cart</span>
+          <button
+            class="header__icon header__cart"
+            id="header-cart"
+            title="Go to the cart"
+          >
             <svg class="header__svg">
               <use href="./img/sprite.svg#card"></use>
             </svg>
-          </a>
+            <span class="cart__count">12</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cart">
+        <h3 class="cart__title">Shoping Cart</h3>
+        <ul class="cart__list">
+          <!-- <li class="cart__item">
+            <p class="cart__item-img"></p>
+            <p class="cart__item-name">Bouquet</p>
+            <p class="cart__item-quantity">1</p>
+            <p class="cart__item-price">40$</p>
+          </li> -->
+        </ul>
+        <div class="cart__total">
+          <span class="cart__total-title">Total:</span>
+          <span class="cart__total-items"></span>
+          <span class="cart__total-price"></span>
         </div>
       </div>
     </header>
@@ -159,6 +180,7 @@
     <script src="js/mood-cards.js"></script>
     <script src="js/bouquets.js"></script>
     <script src="js/social.js"></script>
+    <script src="js/cart.js"></script>
     <script src="js/bouquet-popup.js"></script>
   </body>
 </html>

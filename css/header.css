@@ -1,36 +1,38 @@
 .header {
   height: fit-content;
+  position: relative;
+}
+
+.header__icons {
+  display: flex;
+  gap: 20px;
+  color: transparent;
 }
 
 .header__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  color: #59313b;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.header__icon:hover {
+}
+
+.header__tel {
+}
+
+.header__cart {
   color: transparent;
 }
 
 .header__icon:hover {
-  color: #9f6d88;
-}
-
-.header__tel {
-  width: 25px;
-  height: 25px;
-  /* background: center / contain no-repeat url(./../img/phone-icon.svg); */
-  color: #59313b;
-  margin-right: 30px;
-}
-
-.header__card {
-  width: 25px;
-  height: 25px;
-  /* background-image: url("../img/bag-icon.svg"); */
-  /* background-repeat: no-repeat;
-  background-size: contain;
-  background-color: transparent; */
-  cursor: pointer;
-  /* color: #59313b; */
-}
-
-.header__card:hover {
-  color: #efe4ea;
+  background: #f7f4f5;
+  color: #c693ae;
 }
 
 .header__svg {
