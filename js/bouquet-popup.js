@@ -66,7 +66,7 @@ function createPopup(index) {
 
     totalArticles--;
     cartTotalItems.textContent = setTotalItems(totalArticles);
-
+    cartCount.textContent = totalArticles;
     bouquetPopupSub.disabled = count === 0 ? true : false;
 
     bouquets[index].quantity--;
@@ -92,6 +92,7 @@ function createPopup(index) {
     count++;
     totalArticles++;
     cartTotalItems.textContent = setTotalItems(totalArticles);
+    cartCount.textContent = totalArticles;
 
     let currentTotal = parseInt(bouquetPopupTotal.textContent);
     totalCount = setPrice(bouquets[index].price + currentTotal);

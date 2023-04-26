@@ -5,6 +5,8 @@ for (let i = 0; i < moodArr.length; i++) {
   moodCards.append(createMoodCards(moodArr, i));
 }
 
+// function create single mood card:
+
 function createMoodCards(arr, num) {
   const card = document.createElement("li");
   card.classList.add("cards__item", "cards__item_rotate");

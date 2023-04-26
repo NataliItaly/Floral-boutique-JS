@@ -27,36 +27,32 @@
         <div class="logo logo__header">Floral Boutique</div>
         <nav class="menu" id="header-menu"></nav>
         <div class="header__icons">
-          <a href="tel:+1234566777888" class="header__icon header__tel"
-            ><span class="visually-hidden">Call us</span>
-            <svg class="header__svg">
+          <a
+            href="tel:+1234566777888"
+            class="header__icon header__tel"
+            title="Call us"
+          >
+            <!-- <svg class="header__svg">
               <use href="./img/sprite.svg#tel"></use>
-            </svg>
+            </svg> -->
           </a>
 
           <button
             class="header__icon header__cart"
-            id="header-cart"
+            id="cart-button"
             title="Go to the cart"
           >
-            <svg class="header__svg">
+            <!-- <svg class="header__svg">
               <use href="./img/sprite.svg#card"></use>
-            </svg>
-            <span class="cart__count">12</span>
+            </svg> -->
+            <span class="header__cart-count">0</span>
           </button>
         </div>
       </div>
 
       <div class="cart">
         <h3 class="cart__title">Shoping Cart</h3>
-        <ul class="cart__list">
-          <!-- <li class="cart__item">
-            <p class="cart__item-img"></p>
-            <p class="cart__item-name">Bouquet</p>
-            <p class="cart__item-quantity">1</p>
-            <p class="cart__item-price">40$</p>
-          </li> -->
-        </ul>
+        <ul class="cart__list"></ul>
         <div class="cart__total">
           <span class="cart__total-title">Total:</span>
           <span class="cart__total-items"></span>
@@ -101,7 +97,7 @@
         <div class="container">
           <h2 class="section__title">Floral Catalog</h2>
           <form class="filters" action="#" method="get">
-            <div class="filters__wrapper">
+            <div class="filters__wrapper" data-filter="colors-filter">
               <button
                 class="filters__select"
                 id="colors-filter"
@@ -109,14 +105,16 @@
               >
                 Sort by colors
               </button>
-              <ul class="filters__list" data-category="colors-filter">
-                <li class="filters__option" data-value="pink">Pink</li>
-                <li class="filters__option" data-value="violet">Violet</li>
-                <li class="filters__option" data-value="yellow">Yellow</li>
-                <li class="filters__option" data-value="red">Red</li>
-                <li class="filters__option" data-value="white">White</li>
-                <li class="filters__option" data-value="orange">Orange</li>
-              </ul>
+              <div class="filters__list-wrapper" data-wrapper="colors-filter">
+                <ul class="filters__list" data-category="colors-filter">
+                  <li class="filters__option" data-value="pink">Pink</li>
+                  <li class="filters__option" data-value="violet">Violet</li>
+                  <li class="filters__option" data-value="yellow">Yellow</li>
+                  <li class="filters__option" data-value="red">Red</li>
+                  <li class="filters__option" data-value="white">White</li>
+                  <li class="filters__option" data-value="orange">Orange</li>
+                </ul>
+              </div>
             </div>
             <div class="filters__wrapper">
               <button
@@ -126,16 +124,21 @@
               >
                 Sort by flowers
               </button>
-              <ul class="filters__list" data-category="flowers-filters">
-                <li class="filters__option" data-value="flower">Цветы</li>
-                <li class="filters__option" data-value="">Roses</li>
-                <li class="filters__option" data-value="">Tulips</li>
-                <li class="filters__option" data-value="">Dry Flowers</li>
-                <li class="filters__option" data-value="">Sunflowers</li>
-                <li class="filters__option" data-value="">Daisy</li>
-                <li class="filters__option" data-value="">Gerberas</li>
-                <li class="filters__option" data-value="">Peony</li>
-              </ul>
+              <div class="filters__list-wrapper" data-wrapper="flowers-filter">
+                <ul class="filters__list" data-category="flowers-filter">
+                  <li class="filters__option" data-value="rose">Rose</li>
+                  <li class="filters__option" data-value="tulip">Tulip</li>
+                  <li class="filters__option" data-value="orchid">Orchid</li>
+                  <li class="filters__option" data-value="carnation">
+                    Carnation
+                  </li>
+                  <li class="filters__option" data-value="daffodil">
+                    Daffodil
+                  </li>
+                  <li class="filters__option" data-value="poppy">Poppy</li>
+                  <li class="filters__option" data-value="peony">Peony</li>
+                </ul>
+              </div>
             </div>
             <div class="filters__wrapper">
               <button
@@ -145,18 +148,19 @@
               >
                 Сортировать по цене
               </button>
-              <ul class="filters__list" data-category="prices-filter">
-                <li class="filters__option" data-value="price">Цена</li>
-                <li class="filters__option" data-value="low-price">
-                  less than $30
-                </li>
-                <li class="filters__option" data-value="middle-price">
-                  from $30 to $60
-                </li>
-                <li class="filters__option" data-value="high-price">
-                  more than $60
-                </li>
-              </ul>
+              <div class="filters__list-wrapper" data-wrapper="price-filter">
+                <ul class="filters__list" data-category="price-filter">
+                  <li class="filters__option" data-value="low-price">
+                    less than $30
+                  </li>
+                  <li class="filters__option" data-value="middle-price">
+                    from $30 to $50
+                  </li>
+                  <li class="filters__option" data-value="high-price">
+                    more than $50
+                  </li>
+                </ul>
+              </div>
             </div>
           </form>
 

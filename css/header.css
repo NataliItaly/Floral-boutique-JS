@@ -20,22 +20,30 @@
   cursor: pointer;
 }
 
-.header__icon:hover {
-}
-
 .header__tel {
+  background: center / cover no-repeat url(./../img/tel-icon.svg);
+  background-size: 24px;
 }
 
 .header__cart {
-  color: transparent;
+  width: 60px;
+  justify-content: flex-end;
+  background: left / contain no-repeat url(./../img/bag-icon.svg);
+  background-size: 45px;
+  z-index: 20;
 }
 
 .header__icon:hover {
-  background: #f7f4f5;
-  color: #c693ae;
+  filter: invert(15%) sepia(53%) saturate(7207%) hue-rotate(270deg)
+    brightness(76%) contrast(90%);
 }
 
-.header__svg {
-  width: 24px;
-  height: 24px;
+.header__cart-count {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
 }

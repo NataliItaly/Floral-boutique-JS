@@ -2,7 +2,8 @@ const menuArr = ["Moods", "Ideas", "Catalog", "Subscribe", "Contacts"];
 const headerMenu = document.querySelector("#header-menu");
 const footerMenu = document.querySelector("#footer-menu");
 
-// create menu item function
+// create menu item function:
+
 function createMenuList(num) {
   const menuList = document.createElement("ul");
   menuList.classList.add("menu__list");
@@ -19,6 +20,7 @@ function createMenuList(num) {
   return menuList;
 }
 
-// set menu items in header and footer
+// set menu items in header and footer:
+
 headerMenu.append(createMenuList(5));
 footerMenu.append(createMenuList(3));

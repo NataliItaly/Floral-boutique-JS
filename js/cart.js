@@ -1,4 +1,6 @@
-const headerCart = document.querySelector("#header-cart");
+const cartBtn = document.querySelector("#cart-button");
+const cartCount = document.querySelector(".header__cart-count");
+const cart = document.querySelector(".cart");
 const cartTotalItems = document.querySelector(".cart__total-items");
 const cartTotalPrice = document.querySelector(".cart__total-price");
 const cartList = document.querySelector(".cart__list");
@@ -65,4 +67,9 @@ function setCartItem(num) {
     removeCartItem(num);
   }
 }
-//cart.addEventListener("click", function () {});
+
+// function open cart onclick:
+
+cartBtn.addEventListener("click", function () {
+  cart.classList.toggle("cart_open");
+});

@@ -7,7 +7,12 @@
   right: 0;
   padding: 20px;
   background-color: #fbf9fa;
-  /* transform: translateY(-200%); */
+  transition: 0.6s all ease;
+  transform: translateY(-200%);
+}
+
+.cart_open {
+  transform: translateY(0);
 }
 
 .cart__title {

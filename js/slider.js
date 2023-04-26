@@ -7,10 +7,12 @@ function createImage(num) {
 }
 
 // create first slider image:
+
 let currentImage = 1;
 createImage(1);
 
-// set onclick functionality on previous and next buttons
+// set onclick functionality on previous and next buttons:
+
 nextSliderBtn.addEventListener("click", function () {
   currentImage++;
   if (currentImage > 12) currentImage = 1;

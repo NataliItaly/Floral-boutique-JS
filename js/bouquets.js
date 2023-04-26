@@ -55,7 +55,7 @@ const bouquets = [
     tags: [
       "yellow",
       "white",
-      "blue",
+      "violet",
       "daffodil",
       "tulip",
       "gillyflower",
@@ -92,7 +92,7 @@ const bouquets = [
   {
     name: "Fantasy",
     price: 55,
-    tags: ["rose", "carnation", "pink", "white"],
+    tags: ["rose", "orchid", "white", "violet"],
     inCart: false,
     quantity: 0,
     currentTotal: 0,
@@ -100,7 +100,7 @@ const bouquets = [
   {
     name: "Caramel",
     price: 60,
-    tags: ["rose", "orchid", "chrysanthemum", "violet", "white"],
+    tags: ["peony", "pink"],
     inCart: false,
     quantity: 0,
     currentTotal: 0,

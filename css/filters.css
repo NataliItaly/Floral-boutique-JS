@@ -2,12 +2,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 50px;
-  align-items: center;
   margin-bottom: 40px;
 }
 
 .filters__wrapper {
   position: relative;
+  z-index: 50;
 }
 
 .filters__wrapper::before {
@@ -17,7 +17,7 @@
   border-bottom: 2px solid #59313b;
   border-left: 2px solid #59313b;
   position: absolute;
-  top: 50%;
+  top: 15px;
   transform: translateY(-55%) rotate(-45deg);
   right: 15px;
   cursor: pointer;
@@ -26,16 +26,16 @@
 
 .filters__select {
   width: 100%;
-  background-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   text-align: left;
+  background-color: #efe4ea;
   border: 1px solid #59313b;
   border-radius: 7px;
   padding: 10px 20px;
   position: relative;
-  z-index: 1;
+  z-index: 50;
   cursor: pointer;
 }
 
@@ -43,15 +43,23 @@
   box-shadow: 2px 2px 5px rgba(89, 49, 59, 0.226);
 }
 
-.filters__list {
+.filters__list-wrapper {
   width: 100%;
+  height: 0;
   position: absolute;
   top: 37px;
   left: 0;
-  border: 1px solid #59313b;
-  border-top: none;
-  border-radius: 7px;
-  transform: translateY(-130%);
+  right: 0;
+  overflow: hidden;
+  transition: height 0.4s ease-in;
+}
+
+.filters__list-wrapper_open {
+  height: 229.5px;
+}
+
+.filters__list {
+  /* transform: translateY(-120%); */
 }
 
 .filters__list_open {
@@ -61,11 +69,14 @@
 .filters__option {
   background-color: #efe4ea;
   padding: 5px 20px;
-  border-bottom: 1px solid #59313b;
+  border: 1px solid #59313b;
+  border-top: none;
+  cursor: pointer;
 }
 
 .filters__option:last-of-type {
-  border-bottom: none;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 .filters__option:hover {
