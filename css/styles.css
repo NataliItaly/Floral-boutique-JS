@@ -12,10 +12,6 @@
 @import "./bouquet-popup.css";
 @import "./cart.css";
 
-html {
-  scroll-behavior: smooth;
-}
-
 *,
 *::before,
 *::after {
