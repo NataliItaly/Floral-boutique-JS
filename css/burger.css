@@ -1,0 +1,31 @@
+.burger {
+  width: 40px;
+  height: 35px;
+  z-index: 160;
+  cursor: pointer;
+  display: none;
+}
+
+.burger__line {
+  display: block;
+  height: 2px;
+  width: 80%;
+  background-color: #59393b;
+}
+
+@media (max-width: 970px) {
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+  }
+}
+
+@media (max-width: 520px) {
+  .burger {
+    top: 12px;
+    right: 16px;
+  }
+}

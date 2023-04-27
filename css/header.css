@@ -1,6 +1,6 @@
 .header {
-  height: fit-content;
   position: relative;
+  padding: 25px 0;
 }
 
 .header__icons {
@@ -46,4 +46,52 @@
   align-items: center;
   background-color: #fff;
   border-radius: 50%;
+}
+
+@media (max-width: 970px) {
+  .header__icons {
+    margin: 0 20px 0 auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .header {
+  }
+
+  .header__icon {
+    height: 30px;
+  }
+
+  .header__tel {
+    width: 30px;
+    background-size: 20px;
+  }
+
+  .header__cart {
+    width: 55px;
+    background-size: 40px;
+  }
+
+  .header__cart-count {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 440px) {
+  .header {
+    padding-top: 15px;
+  }
+
+  .header__icons {
+    order: 1;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .header__icons {
+    gap: 15px;
+  }
 }

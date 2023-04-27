@@ -25,7 +25,7 @@
     <header class="header">
       <div class="container container__flex_row">
         <div class="logo logo__header">Floral Boutique</div>
-        <nav class="menu" id="header-menu"></nav>
+        <nav class="menu menu_header" id="header-menu"></nav>
         <div class="header__icons">
           <a
             href="tel:+1234566777888"
@@ -44,6 +44,12 @@
             </svg> -->
             <span class="header__cart-count">0</span>
           </button>
+        </div>
+
+        <div class="burger">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
         </div>
       </div>
 
@@ -71,7 +77,7 @@
       <section class="section" id="moods">
         <div class="container">
           <h2 class="section__title">Season's mood</h2>
-          <li class="cards"></li>
+          <li class="cards cards_mood"></li>
         </div>
       </section>
 
@@ -143,7 +149,7 @@
                 id="price-filter"
                 name="price-filter"
               >
-                Сортировать по цене
+                Sort by price
               </button>
               <div class="filters__list-wrapper" data-wrapper="price-filter">
                 <ul class="filters__list" data-category="price-filter">
@@ -168,9 +174,9 @@
     </main>
 
     <footer class="footer" id="contacts">
-      <div class="container">
+      <div class="container container_footer">
         <div class="logo logo__footer">Floral Boutique</div>
-        <div class="menu" id="footer-menu"></div>
+        <div class="menu menu_footer" id="footer-menu"></div>
         <ul class="social"></ul>
       </div>
     </footer>

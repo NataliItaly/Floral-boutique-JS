@@ -8,9 +8,7 @@ filters.addEventListener("click", function (event) {
   event.preventDefault();
   if (event.target.classList.contains("filters__select")) {
     console.log(event.target);
-    console.log();
-    console.log(event.target.lastChild);
-
+    event.target.classList.toggle("filters__select_open");
     let selectId = event.target.getAttribute("id");
     filtersList.forEach((list) => {
       if (list.dataset.category === selectId) {

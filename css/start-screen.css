@@ -7,7 +7,7 @@
 }
 
 .start-screen__title {
-  font-size: 62px;
+  font-size: calc(30px + 34 * (100vw / 1440));
   margin: 0;
   animation-name: moveToRight;
   animation-duration: 2s;
@@ -37,5 +37,25 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 620px) {
+  .start-screen__text {
+    padding: 50px 0 0;
+  }
+
+  .start-screen__title {
+  }
+}
+
+@media (max-width: 520px) {
+  .start-screen__title {
+  }
+}
+
+@media (max-width: 380px) {
+  .start-screen__title {
+    font-size: 32px;
   }
 }

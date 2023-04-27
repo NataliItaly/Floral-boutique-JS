@@ -16,3 +16,10 @@
   border: none;
   box-shadow: 0 0 10px #59313b;
 }
+
+@media (max-width: 480px) {
+  .button_secondary {
+    width: 80%;
+    height: 40px;
+  }
+}

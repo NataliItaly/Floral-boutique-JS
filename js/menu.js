@@ -27,10 +27,24 @@ function createMenuList(num) {
 headerMenu.append(createMenuList(5));
 footerMenu.append(createMenuList(3));
 
+// set separate classes to header menu and footer
+const menuList = document.querySelectorAll(".menu__list");
+menuList.forEach((list) => {
+  if (list.closest(".menu_header")) {
+    list.classList.add("menu__list_header");
+  }
+  if (list.closest(".menu_footer")) {
+    list.classList.add("menu__list_footer");
+  }
+});
+
 // choose all link that begin with # and set smooth scroll to the ancor sections
 
 const menuLinks = document.querySelectorAll('a[href^="#"]');
 menuLinks.forEach((link) => {
+  if (link.closest(".menu_header")) {
+    link.classList.add("menu__link_header");
+  }
   link.addEventListener("click", function (event) {
     event.preventDefault();
     const id = link.getAttribute("href");

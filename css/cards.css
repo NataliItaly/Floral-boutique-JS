@@ -145,3 +145,20 @@
   color: #59313b;
   margin-bottom: 20px;
 }
+
+@media (max-width: 1380px) {
+  .cards_mood {
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+  }
+
+  .cards_catalog {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .cards_mood {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}

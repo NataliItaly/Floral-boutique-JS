@@ -35,8 +35,13 @@
   border-radius: 7px;
   padding: 10px 20px;
   position: relative;
-  z-index: 50;
   cursor: pointer;
+  z-index: 0;
+}
+
+.filters__select_open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .filters__select:focus {
@@ -64,6 +69,7 @@
 
 .filters__list_open {
   transform: translateY(0);
+  z-index: 100;
 }
 
 .filters__option {
@@ -82,4 +88,15 @@
 .filters__option:hover {
   background-color: #602e66;
   color: #fff;
+}
+
+@media (max-width: 590px) {
+  .filters {
+    grid-template-columns: 190px;
+    justify-content: center;
+  }
+
+  .filters__wrapper {
+    margin-bottom: 20px;
+  }
 }
