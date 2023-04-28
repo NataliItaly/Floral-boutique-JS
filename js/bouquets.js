@@ -180,7 +180,7 @@ function createSingleCard(ind) {
       <h3 class="cards__title">Bouquet ${bouquets[ind].name}</h3>
       <img src="img/cards/${bouquets[ind].name}.jpg" alt="Bouquet ${bouquets[ind].name} picture" class="cards__img" />
       <p class="card__price">${bouquets[ind].price}$</p>
-      <button class="cards__button">Order</button>
+      <button class="cards__button button button_primary">Order</button>
     `;
 
   item.addEventListener("click", function (event) {

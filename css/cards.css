@@ -112,12 +112,6 @@
 }
 
 .cards__title {
-  /* font-family: "Merriweather";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 28px;
-  color: #40393b; */
   margin-bottom: 5px;
   font-size: 36px;
   line-height: 60px;
@@ -126,17 +120,8 @@
 }
 
 .cards__button {
-  display: block;
-  background: #59313b;
-  border-radius: 7px;
-  font-size: 16px;
-  padding: 10px 20px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  color: #ffffff;
+  width: 70%;
   margin: 10px auto 0;
-  transition: 0.4s all ease;
 }
 
 .card__price {

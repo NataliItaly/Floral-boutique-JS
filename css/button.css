@@ -1,20 +1,37 @@
-.button_secondary {
+.button {
   display: block;
-  width: 380px;
-  height: 68px;
+  border-radius: 7px;
   font-size: 16px;
+  padding: 10px 20px;
+  transition: 0.4s all ease;
+  cursor: pointer;
+}
+
+.button_primary {
+  background: #59313b;
+  color: #ffffff;
+}
+
+.button_primary:hover {
+  background-color: #f1d7fa;
+  color: #59313b;
+  box-shadow: 0 0 6px #59313b;
+}
+
+.button_secondary {
   color: #59313b;
   border: 1px solid #59313b;
-  border-radius: 7px;
   background-color: transparent;
-  margin: 60px auto 70px;
-  cursor: pointer;
-  transition: 0.4s all ease;
 }
 
 .button_secondary:hover {
   border: none;
   box-shadow: 0 0 10px #59313b;
+}
+
+.button_cards {
+  width: 380px;
+  margin: 60px auto 70px;
 }
 
 @media (max-width: 480px) {

@@ -50,6 +50,7 @@
           <span class="burger__line"></span>
           <span class="burger__line"></span>
           <span class="burger__line"></span>
+          <span class="burger__line"></span>
         </div>
       </div>
 
@@ -168,7 +169,79 @@
           </form>
 
           <ul class="cards cards_catalog"></ul>
-          <button class="button_secondary" id="catalog-button">See more</button>
+          <button
+            class="button button_secondary button_cards"
+            id="catalog-button"
+          >
+            See more
+          </button>
+        </div>
+      </section>
+
+      <section class="section section_subscribe" id="subscribe">
+        <div class="container">
+          <h2 class="section__title section__title_subscribe">
+            Do you want more news?
+          </h2>
+          <form class="subscribe" action="action_page.php">
+            <label for="email" class="subscribe__label">Email</label>
+            <input
+              class="subscribe__input"
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              required
+            />
+
+            <label for="psw" class="subscribe__label">Password</label>
+            <input
+              class="subscribe__input"
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              required
+            />
+
+            <label for="psw-repeat" class="subscribe__label"
+              >Repeat Password</label
+            >
+            <input
+              class="subscribe__input"
+              type="password"
+              placeholder="Repeat Password"
+              name="psw-repeat"
+              required
+            />
+
+            <p class="">
+              <input
+                class="subscribe__checkbox"
+                type="checkbox"
+                name="remember"
+                id="checkbox-input"
+              />
+              <label for="#checkbox-input" class="subscribe__label_checkbox">
+                Remember me
+              </label>
+            </p>
+
+            <p class="subscribe__agree">
+              By creating an account you agree to our
+              <a href="#" class="subscribe__terms">Terms & Privacy</a>.
+            </p>
+
+            <div class="subscribe__buttons">
+              <button class="button button_primary subscribe__button">
+                Sign Up
+              </button>
+              <button
+                type="submit"
+                class="button button_secondary subscribe__button"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
@@ -181,6 +254,7 @@
       </div>
     </footer>
 
+    <script src="js/variables.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/filters.js"></script>
     <script src="js/menu.js"></script>
@@ -189,5 +263,6 @@
     <script src="js/social.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/bouquet-popup.js"></script>
+    <script src="js/burger.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 .bouquet-popup {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -38,6 +38,7 @@
   background-color: #fff;
   position: relative;
   animation: bouquet-popup 0.6s;
+  overflow-y: auto;
 }
 
 .bouquet-popup__inner_close {
@@ -81,6 +82,7 @@
   display: flex;
   justify-content: center;
   gap: 40px;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 

@@ -1,0 +1,90 @@
+.subscribe {
+  width: 70%;
+  min-width: 285px;
+  padding: 40px;
+  border: 1px solid #f0e5eb;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.subscribe__agree {
+  font-size: 14px;
+  color: #59313b;
+  font-family: "Merriweather";
+}
+
+.subscribe__terms {
+  font-family: "Tangerine", cursive;
+  font-size: 28px;
+  color: #59325f;
+  cursor: pointer;
+}
+
+.subscribe__terms:hover {
+  color: #59325f;
+}
+
+.subscribe__label {
+  font-weight: normal;
+  font-family: "Tangerine", cursive;
+  font-size: 26px;
+  color: #59313b;
+}
+
+.subscribe__input {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  background: #efe4ea;
+}
+
+.subscribe__input:focus {
+  background-color: #f1f1f1;
+  outline: none;
+}
+
+.subscribe__label_checkbox {
+  position: relative;
+  font-family: "Merriweather";
+  font-size: 14px;
+}
+
+.subscribe__label_checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  background-color: #f1f1f1;
+  border: 1px solid #59313b;
+  cursor: pointer;
+}
+
+.subscribe__checkbox {
+  opacity: 0;
+}
+
+.subscribe__checkbox:checked ~ .subscribe__label_checkbox::before {
+  background: center / contain no-repeat url(./../img/check-icon.svg);
+  filter: invert(24%) sepia(18%) saturate(902%) hue-rotate(307deg)
+    brightness(92%) contrast(92%);
+}
+
+.subscribe__buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 20px 20px;
+}
+
+.subscribe__button {
+  width: 40%;
+}
+
+@media (max-width: 740px) {
+  .subscribe {
+    padding: 20px;
+  }
+}

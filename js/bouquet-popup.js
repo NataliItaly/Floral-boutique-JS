@@ -134,7 +134,7 @@ function createPopup(index) {
     bouquetPopupInner.classList.add("bouquet-popup__inner_close");
     setTimeout(function () {
       bouquetPopup.remove();
-      document.body.classList.remove("block");
+      BODY.classList.remove("block");
     }, 500);
   });
 
@@ -142,7 +142,7 @@ function createPopup(index) {
   bouquetPopup.append(bouquetPopupInner);
   catalog.append(bouquetPopup);
 
-  document.body.classList.add("block");
+  BODY.classList.add("block");
   bouquetPopupInner.classList.add("bo");
 }
 

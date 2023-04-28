@@ -2,6 +2,10 @@
   padding: 40px 0;
 }
 
+.section_subscribe {
+  background-color: #e8caf3;
+}
+
 .section__ideas {
   background-color: #e8caf3;
 }
@@ -12,8 +16,13 @@
   font-family: "Merriweather";
   font-style: normal;
   font-weight: 300;
-  font-size: 42px;
+  font-size: calc(20px + 32 * (100vw / 1440));
   line-height: 1.5;
   color: #59313b;
   margin: 20px auto 30px;
+}
+
+.section__title_subscribe {
+  font-size: 28px;
+  font-weight: normal;
 }
