@@ -46,13 +46,13 @@
   outline: none;
 }
 
-.subscribe__label_checkbox {
+/* .subscribe__label_checkbox {
   position: relative;
   font-family: "Merriweather";
   font-size: 14px;
-}
+} */
 
-.subscribe__label_checkbox::before {
+/* .subscribe__label_checkbox::before {
   content: "";
   display: inline-block;
   width: 13px;
@@ -61,16 +61,58 @@
   background-color: #f1f1f1;
   border: 1px solid #59313b;
   cursor: pointer;
-}
+} */
 
-.subscribe__checkbox {
+/* .subscribe__checkbox {
   opacity: 0;
-}
+} */
 
-.subscribe__checkbox:checked ~ .subscribe__label_checkbox::before {
+/* .subscribe__checkbox:checked ~ .subscribe__label_checkbox::before {
   background: center / contain no-repeat url(./../img/check-icon.svg);
   filter: invert(24%) sepia(18%) saturate(902%) hue-rotate(307deg)
     brightness(92%) contrast(92%);
+} */
+
+.subscribe__label_checkbox {
+  display: inline-flex;
+  position: relative;
+}
+
+.subscribe__checkbox {
+  position: absolute;
+  outline: none;
+  clip: rect(0, 0, 0, 0);
+}
+
+.checkbox__state {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox__control {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #59313b;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.checkbox__icon {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.checkbox__input:checked + .checkbox__state .checkbox__control {
+  background-color: #59313b;
+}
+
+.checkbox__input:checked + .checkbox__state .checkbox__icon {
+  opacity: 1;
 }
 
 .subscribe__buttons {

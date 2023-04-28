@@ -214,14 +214,33 @@
             />
 
             <p class="">
-              <input
-                class="subscribe__checkbox"
-                type="checkbox"
-                name="remember"
-                id="checkbox-input"
-              />
-              <label for="#checkbox-input" class="subscribe__label_checkbox">
-                Remember me
+              <label class="subscribe__label_checkbox">
+                <input
+                  type="checkbox"
+                  name="remember"
+                  class="subscribe__checkbox"
+                />
+                <div class="checkbox__state">
+                  <div class="checkbox__control">
+                    <svg
+                      class="checkbox__icon"
+                      width="15"
+                      height="13"
+                      viewBox="0 0 15 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1.5 7.5L5 11L13 2"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="checkbox__title">Remember</div>
+                </div>
               </label>
             </p>
 
@@ -247,10 +266,24 @@
     </main>
 
     <footer class="footer" id="contacts">
-      <div class="container container_footer">
-        <div class="logo logo__footer">Floral Boutique</div>
-        <div class="menu menu_footer" id="footer-menu"></div>
-        <ul class="social"></ul>
+      <div class="container">
+        <div class="footer__flex">
+          <div class="logo logo__footer">Floral Boutique</div>
+          <div class="menu menu_footer" id="footer-menu"></div>
+          <ul class="social"></ul>
+        </div>
+        <div class="developer">
+          This project is designed and created by
+          <a href="https://nataliitaly.github.io/rsschool-cv/" target="_blank"
+            >Krylova nataliya</a
+          >
+          for
+          <a
+            href="https://emc.udacity.com/c/scholarshipsbertelsmann/catalog/MTO6AM7H/i/nd/nd0011-connect-bmann"
+            target="_blank"
+            >Udacity Front End Nanodegree programm</a
+          >
+        </div>
       </div>
     </footer>
 
