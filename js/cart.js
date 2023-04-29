@@ -4,6 +4,7 @@ const cart = document.querySelector(".cart");
 const cartTotalItems = document.querySelector(".cart__total-items");
 const cartTotalPrice = document.querySelector(".cart__total-price");
 const cartList = document.querySelector(".cart__list");
+const cartClose = document.querySelector(".cart__close");
 
 let totalArticles = 0;
 let totalPrice = 0;
@@ -25,19 +26,19 @@ function addCartItem(ind) {
   cartItem.setAttribute("data-cart-item", `${bouquets[ind].name}`);
 
   const cartItemImg = document.createElement("p");
-  cartItemImg.classList.add(".cart__item-img");
+  cartItemImg.classList.add("cart__item-img");
   cartItemImg.innerHTML = `<img src="img/cards/${bouquets[ind].name}.jpg" alt="Bouquet ${bouquets[ind].name} picture" class="cart__img" />`;
 
   const cartItemName = document.createElement("p");
-  cartItemImg.classList.add(".cart__item-name");
+  cartItemImg.classList.add("cart__item-name");
   cartItemName.textContent = bouquets[ind].name;
 
   const cartItemQuantity = document.createElement("p");
-  cartItemQuantity.classList.add(".cart__item-quantity");
+  cartItemQuantity.classList.add("cart__item-quantity");
   cartItemQuantity.textContent = bouquets[ind].quantity;
 
   const cartItemPrice = document.createElement("p");
-  cartItemPrice.classList.add(".cart__item-price");
+  cartItemPrice.classList.add("cart__item-price");
   cartItemPrice.textContent = `${
     bouquets[ind].quantity * bouquets[ind].price
   }$`;
@@ -69,7 +70,11 @@ function setCartItem(num) {
 }
 
 // function open cart onclick:
-
 cartBtn.addEventListener("click", function () {
-  cart.classList.toggle("cart_open");
+  cart.classList.add("cart_open");
+});
+
+// close the cart:
+cartClose.addEventListener("click", function () {
+  cart.classList.remove("cart_open");
 });
