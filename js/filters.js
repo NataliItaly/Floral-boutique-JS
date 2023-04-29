@@ -17,6 +17,11 @@ function setOpenState(elem) {
       wrapper.classList.toggle("filters__list-wrapper_open");
     }
   });
+  filtersWraper.forEach((filter) => {
+    if (filter.dataset.filter === selectId) {
+      filter.classList.toggle("filters__wrapper_open");
+    }
+  });
 }
 
 function openFilter(event) {
@@ -24,9 +29,7 @@ function openFilter(event) {
   if (event.target.classList.contains("filters__select")) {
     console.log(event.target);
     setOpenState(event.target);
-  } /* else if (event.target.classList.contains("filters__list-wrapper")) {
-    setOpenState(event.target);
-  } */
+  }
 }
 
 filters.addEventListener("click", openFilter);

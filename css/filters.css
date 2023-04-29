@@ -7,7 +7,15 @@
 
 .filters__wrapper {
   position: relative;
-  z-index: 50;
+  z-index: 5;
+}
+
+.filters__wrapper:nth-child(2) {
+  z-index: 10;
+}
+
+.filters__wrapper:nth-child(1) {
+  z-index: 15;
 }
 
 .filters__wrapper::before {
@@ -22,6 +30,11 @@
   right: 15px;
   cursor: pointer;
   pointer-events: none;
+  z-index: 1;
+}
+
+.filters__wrapper_open::before {
+  transform: rotate(-224deg);
 }
 
 .filters__select {
