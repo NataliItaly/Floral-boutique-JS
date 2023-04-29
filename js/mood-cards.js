@@ -37,8 +37,8 @@ function createMoodCards(arr, num) {
             </div>
             <a href="https://www.gardenersworld.com/search/?q=${
               arr[num]
-            }+flowers" class="cards__button cards__button_back" target="_blank"
-            >See about ${arr[num]} flowers</a>
+            }+flowers" class="button cards__button cards__button_back" target="_blank"
+            >Read about ${arr[num]} flowers</a>
         </div>
            `;
   return card;

@@ -3,3 +3,12 @@
   word-spacing: 5px;
   text-align: center;
 }
+
+.developer__link {
+  transition: 0.5s;
+}
+
+.developer__link:hover {
+  color: inherit;
+  border-bottom: 1px solid #59393b;
+}

@@ -25,6 +25,11 @@
   .container {
     padding: 0 20px;
   }
+
+  .container__slider {
+    padding: 0;
+  }
+
   .footer__flex {
     flex-direction: column;
     align-items: center;

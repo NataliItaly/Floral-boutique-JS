@@ -4,24 +4,34 @@ const filtersSelect = document.querySelectorAll(".filters__select");
 const filtersListWrapers = document.querySelectorAll(".filters__list-wrapper");
 const filtersList = filters.querySelectorAll(".filters__list");
 
-filters.addEventListener("click", function (event) {
+function setOpenState(elem) {
+  elem.classList.toggle("filters__select_open");
+  let selectId = elem.getAttribute("id");
+  filtersList.forEach((list) => {
+    if (list.dataset.category === selectId) {
+      list.classList.toggle("filters__list_open");
+    }
+  });
+  filtersListWrapers.forEach((wrapper) => {
+    if (wrapper.dataset.wrapper === selectId) {
+      wrapper.classList.toggle("filters__list-wrapper_open");
+    }
+  });
+}
+
+function openFilter(event) {
   event.preventDefault();
   if (event.target.classList.contains("filters__select")) {
     console.log(event.target);
-    event.target.classList.toggle("filters__select_open");
-    let selectId = event.target.getAttribute("id");
-    filtersList.forEach((list) => {
-      if (list.dataset.category === selectId) {
-        list.classList.toggle("filters__list_open");
-      }
-    });
-    filtersListWrapers.forEach((wrapper) => {
-      if (wrapper.dataset.wrapper === selectId) {
-        wrapper.classList.toggle("filters__list-wrapper_open");
-      }
-    });
-  }
-});
+    setOpenState(event.target);
+  } /* else if (event.target.classList.contains("filters__list-wrapper")) {
+    setOpenState(event.target);
+  } */
+}
+
+filters.addEventListener("click", openFilter);
+
+//filters.removeEventListener("mouseout", openFilter);
 
 filtersList.forEach((filter) => {
   filter.addEventListener("click", function (event) {
