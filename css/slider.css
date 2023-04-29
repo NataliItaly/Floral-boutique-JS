@@ -7,6 +7,7 @@
 .slider__inner {
   height: 400px;
   /* background-image: url(./../img/slider/1.jpg); */
+  background-position-x: center;
   background-size: cover;
   transition: background 1s;
 }

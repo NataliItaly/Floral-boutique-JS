@@ -10,37 +10,36 @@ function createPopup(index) {
   bouquetPopupInner.classList.add("bouquet-popup__inner");
   bouquetPopupInner.innerHTML = `
             <div class = "bouquet-popup__header">
+              <div>
                 <h3 class = "bouquet-popup__title">Bouquet ${bouquets[index].name}</h3>
-                <p class = "bouquet-popup__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsum id illo eaque, repellat sunt ex.</p>
-            </div>
-            <div class = "bouquet-popup__content">
-                <img src = "img/cards/${bouquets[index].name}.jpg" class="bouquet-popup__img" alt = "Bouquet ${bouquets[index].name} picture">
-                <div>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p class = "bouquet-popup__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum id illo eaque, repellat sunt ex.</p>
+                <div class="bouquet-popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ipsum id illo eaque, repellat sunt ex est mollitia natus
                     tempore assumenda voluptas, sit nobis, reiciendis accusamus
+                    omnis delectus illum impedit tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum id illo eaque, repellat sunt ex est mollitia natus tempore assumenda voluptas, sit nobis, reiciendis accusamus
                     omnis delectus illum impedit tenetur.</div>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsum id illo eaque, repellat sunt ex est mollitia natus
-                    tempore assumenda voluptas, sit nobis, reiciendis accusamus
-                    omnis delectus illum impedit tenetur.</div>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsum id illo eaque, repellat sunt ex est mollitia natus
-                    tempore assumenda voluptas, sit nobis, reiciendis accusamus
-                    omnis delectus illum impedit tenetur.</div>
-                </div>
+              </div>
             </div>
           `;
 
-  // popup footer where it's possible to add (or remove) the item to cart:
-  const bouquetPopupFooter = document.createElement("div");
-  bouquetPopupFooter.classList.add("bouquet-popup__footer");
+  const bouquetPopupContent = document.createElement("div");
+  bouquetPopupContent.classList.add("bouquet-popup__content");
+  bouquetPopupContent.innerHTML = `<div class="bouquet-popup__img-wrapper">
+    <img src = "img/cards/${bouquets[index].name}.jpg" class="bouquet-popup__img" alt = "Bouquet ${bouquets[index].name} picture">
+    </div>`;
+
+  // popup aside where it's possible to add (or remove) the item to cart:
+  const bouquetPopupAside = document.createElement("div");
+  bouquetPopupAside.classList.add("bouquet-popup__aside");
 
   // choosen bouquet's price
   const bouquetPopupPrice = document.createElement("div");
   bouquetPopupPrice.classList.add("bouquet-popup__price");
-  bouquetPopupPrice.innerHTML = `${bouquets[index].price}$`;
+  bouquetPopupPrice.innerHTML = `Price: ${bouquets[index].price}$`;
+
+  // popup add / remove buttons block:
+  const bouquetPopupButtons = document.createElement("div");
+  bouquetPopupButtons.classList.add("bouquet-popup__buttons");
 
   // count of choosen bouquet item:
   let count = bouquets[index].quantity;
@@ -58,7 +57,7 @@ function createPopup(index) {
   bouquetPopupSub.classList.add("bouquet-popup__btn");
   bouquetPopupSub.innerHTML = "-";
 
-  // the button is disabled if thre is no such type of bouquets in cart, so it's not possible to have a negative quantity of bouquets
+  // the button is disabled if there is no such type of bouquets in cart, so it's not possible to have a negative quantity of bouquets
   bouquetPopupSub.disabled = !bouquets[index].inCart;
 
   bouquetPopupSub.addEventListener("click", function () {
@@ -109,21 +108,26 @@ function createPopup(index) {
     setCartItem(index);
   });
 
-  const bouquetPopupTotalSpan = document.createElement("div");
-  bouquetPopupTotalSpan.classList.add("bouquet-popup__span");
-  bouquetPopupTotalSpan.textContent = `Total: `;
+  bouquetPopupButtons.append(
+    bouquetPopupSub,
+    bouquetPopupCount,
+    bouquetPopupAdd
+  );
 
-  const bouquetPopupTotal = document.createElement("div");
+  const bouquetPopupTotalDiv = document.createElement("div");
+  bouquetPopupTotalDiv.classList.add("bouquet-popup__div");
+  bouquetPopupTotalDiv.textContent = `Total: `;
+
+  const bouquetPopupTotal = document.createElement("span");
   bouquetPopupTotal.classList.add("bouquet-popup__total");
   bouquetPopupTotal.innerHTML = `${totalCount}$`;
 
-  bouquetPopupFooter.append(
+  bouquetPopupTotalDiv.append(bouquetPopupTotal);
+
+  bouquetPopupAside.append(
     bouquetPopupPrice,
-    bouquetPopupSub,
-    bouquetPopupCount,
-    bouquetPopupAdd,
-    bouquetPopupTotalSpan,
-    bouquetPopupTotal
+    bouquetPopupButtons,
+    bouquetPopupTotalDiv
   );
 
   // close popup button:
@@ -138,7 +142,8 @@ function createPopup(index) {
     }, 500);
   });
 
-  bouquetPopupInner.append(bouquetPopupFooter, bouquetPopupClose);
+  bouquetPopupContent.append(bouquetPopupAside);
+  bouquetPopupInner.append(bouquetPopupContent, bouquetPopupClose);
   bouquetPopup.append(bouquetPopupInner);
   catalog.append(bouquetPopup);
 
