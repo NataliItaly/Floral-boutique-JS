@@ -35,6 +35,7 @@
 .cards__item_rotate {
   -moz-perspective: 150px;
   perspective: 500px;
+  padding: 0;
   height: 475px;
   background: transparent;
   transition: 0.8s;

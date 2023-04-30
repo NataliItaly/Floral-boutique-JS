@@ -47,4 +47,8 @@
   .container__flex_row {
     padding: 0 10px;
   }
+
+  .container_moods {
+    padding: 0 5px;
+  }
 }

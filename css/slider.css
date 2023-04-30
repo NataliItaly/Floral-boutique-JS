@@ -41,3 +41,10 @@
 .slider__btn:hover {
   background-color: rgba(239, 228, 234, 0.6);
 }
+
+@media (max-width: 380px) {
+  .slider__btn {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -13,6 +13,7 @@ function createMoodCards(arr, num) {
             <h3 class="cards__title">${cardName} mood</h3>
             <img
                 src="./img/mood/${num + 1}.jpg"
+                width="298" height="397"
                 class="cards__img cards__img_rotate"
                 alt="${arr[num]} flowers"
             />
