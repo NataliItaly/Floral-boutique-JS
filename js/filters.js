@@ -1,9 +1,3 @@
-const filters = document.querySelector(".filters");
-const filtersWraper = document.querySelectorAll(".filters__wrapper");
-const filtersSelect = document.querySelectorAll(".filters__select");
-const filtersListWrapers = document.querySelectorAll(".filters__list-wrapper");
-const filtersList = filters.querySelectorAll(".filters__list");
-
 function setOpenState(elem) {
   elem.classList.toggle("filters__select_open");
   let selectId = elem.getAttribute("id");

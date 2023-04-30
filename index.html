@@ -185,6 +185,15 @@
             Do you want more news?
           </h2>
           <form class="subscribe" action="#0" id="subscribe-form">
+            <label for="name" class="subscribe__label">Your name</label>
+            <input
+              class="subscribe__input"
+              type="text"
+              placeholder="Enter your name"
+              name="name"
+              id="name"
+              required
+            />
             <label for="email" class="subscribe__label">Email</label>
             <input
               class="subscribe__input"
@@ -221,6 +230,7 @@
               minlength="8"
               maxlength="16"
             />
+            <p class="subscribe__error"></p>
 
             <p class="subscribe__checkbox-wrapper">
               <input

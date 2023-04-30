@@ -1,11 +1,3 @@
-const cartBtn = document.querySelector("#cart-button");
-const cartCount = document.querySelector(".header__cart-count");
-const cart = document.querySelector(".cart");
-const cartTotalItems = document.querySelector(".cart__total-items");
-const cartTotalPrice = document.querySelector(".cart__total-price");
-const cartList = document.querySelector(".cart__list");
-const cartClose = document.querySelector(".cart__close");
-
 let totalArticles = 0;
 let totalPrice = 0;
 

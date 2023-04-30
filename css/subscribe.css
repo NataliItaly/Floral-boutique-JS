@@ -67,6 +67,12 @@
   border-color: #59313b;
 }
 
+.subscribe__error {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #fd3232;
+}
+
 .subscribe__checkbox-wrapper {
   position: relative;
 }

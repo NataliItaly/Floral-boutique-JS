@@ -1,9 +1,5 @@
-const sliderInner = document.querySelector(".slider__inner");
-const prevSliderBtn = document.querySelector(".slider__btn_prev");
-const nextSliderBtn = document.querySelector(".slider__btn_next");
-
 function createImage(num) {
-  sliderInner.style.backgroundImage = `url(./../img/slider/${num}.JPG)`;
+  sliderInner.style.backgroundImage = `url(../../img/slider/${num}.jpg)`;
 }
 
 // create first slider image:

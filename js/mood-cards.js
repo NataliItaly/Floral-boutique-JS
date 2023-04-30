@@ -1,6 +1,3 @@
-const moodArr = ["winter", "spring", "summer", "autumn"];
-const moodCards = document.querySelector(".cards");
-
 for (let i = 0; i < moodArr.length; i++) {
   moodCards.append(createMoodCards(moodArr, i));
 }

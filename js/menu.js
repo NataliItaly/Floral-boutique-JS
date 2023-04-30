@@ -1,7 +1,3 @@
-const menuArr = ["moods", "ideas", "catalog", "subscribe", "contacts"];
-const headerMenu = document.querySelector("#header-menu");
-const footerMenu = document.querySelector("#footer-menu");
-
 // create menu item function:
 
 function createMenuList(num) {

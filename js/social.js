@@ -1,6 +1,3 @@
-const socialArr = ["instagram", "facebook", "pinterest"];
-const social = document.querySelector(".social");
-
 // create social single item and append to social list:
 
 function createSocialItems() {
