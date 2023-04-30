@@ -1,5 +1,5 @@
 function createImage(num) {
-  sliderInner.style.backgroundImage = `url(../../img/slider/${num}.jpg)`;
+  sliderInner.style.backgroundImage = `url(img/slider/${num}.jpg)`;
 }
 
 // create first slider image:
