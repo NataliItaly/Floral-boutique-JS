@@ -6,6 +6,9 @@ function createSocialItems() {
     item.classList.add("social-item");
     item.innerHTML = `<a
               href="https://www.${socialArr[i]}.com/"
+              aria-label="Follow us in ${socialArr[
+                i
+              ][0].toUpperCase()}${socialArr[i].slice(1)}"
               class="social-link ${socialArr[i]}" target="_blank"
             ></a>`;
     social.append(item);

@@ -178,7 +178,7 @@ function createSingleCard(ind) {
   item.setAttribute("data-bouquet", `${bouquets[ind].name}`);
   item.innerHTML = `
       <h3 class="cards__title">Bouquet ${bouquets[ind].name}</h3>
-      <img src="img/cards/${bouquets[ind].name}.jpg" alt="Bouquet ${bouquets[ind].name} picture" class="cards__img" />
+      <img src="img/cards/${bouquets[ind].name}.jpg" width="268" height="226" alt="Bouquet ${bouquets[ind].name} picture" class="cards__img" />
       <p class="card__price">${bouquets[ind].price}$</p>
       <button class="cards__button button button_primary">Order</button>
     `;
