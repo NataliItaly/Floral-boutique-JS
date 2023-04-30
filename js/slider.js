@@ -3,7 +3,7 @@ const prevSliderBtn = document.querySelector(".slider__btn_prev");
 const nextSliderBtn = document.querySelector(".slider__btn_next");
 
 function createImage(num) {
-  sliderInner.style.backgroundImage = `url(./../img/slider/${num}.jpg)`;
+  sliderInner.style.backgroundImage = `url(./../img/slider/${num}.JPG)`;
 }
 
 // create first slider image:

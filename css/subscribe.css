@@ -7,6 +7,19 @@
   margin: 0 auto;
 }
 
+.subscribe__title {
+  font-size: calc(19px + 4 * (100vw / 1440));
+  font-weight: normal;
+}
+
+.subscribe__title_complete {
+  width: 100%;
+  border: 1px solid #f0e5eb;
+  border-radius: 15px;
+  padding: 20px 20px;
+  text-align: center;
+}
+
 .subscribe__agree {
   font-size: 14px;
   color: #59313b;
@@ -44,6 +57,14 @@
 .subscribe__input:focus {
   background-color: #f1f1f1;
   outline: none;
+}
+
+.subscribe__input:valid {
+  border-color: #59325f;
+}
+
+.subscribe__input:invalid {
+  border-color: #59313b;
 }
 
 .subscribe__checkbox-wrapper {

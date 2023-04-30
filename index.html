@@ -1,4 +1,4 @@
-<!DOCTYPE >
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -181,37 +181,45 @@
 
       <section class="section section_subscribe" id="subscribe">
         <div class="container">
-          <h2 class="section__title section__title_subscribe">
+          <h2 class="section__title subscribe__title" id="subscribe-title">
             Do you want more news?
           </h2>
-          <form class="subscribe" action="action_page.php">
+          <form class="subscribe" action="#0" id="subscribe-form">
             <label for="email" class="subscribe__label">Email</label>
             <input
               class="subscribe__input"
               type="text"
               placeholder="Enter Email"
               name="email"
+              id="email"
               required
             />
 
-            <label for="psw" class="subscribe__label">Password</label>
+            <label for="password" class="subscribe__label">Password</label>
             <input
               class="subscribe__input"
               type="password"
-              placeholder="Enter Password"
-              name="psw"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+              placeholder="Enter Password between 8 and 16 characters long and contain one uppercase letter, one symbol, and a number."
+              name="password"
+              id="password"
               required
+              minlength="8"
+              maxlength="16"
             />
 
-            <label for="psw-repeat" class="subscribe__label"
+            <label for="password-repeat" class="subscribe__label"
               >Repeat Password</label
             >
             <input
               class="subscribe__input"
               type="password"
               placeholder="Repeat Password"
-              name="psw-repeat"
+              name="password-repeat"
+              id="password-repeat"
               required
+              minlength="8"
+              maxlength="16"
             />
 
             <p class="subscribe__checkbox-wrapper">
@@ -232,15 +240,18 @@
             </p>
 
             <div class="subscribe__buttons">
-              <button class="button button_primary subscribe__button">
-                Sign Up
-              </button>
-              <button
+              <input
                 type="submit"
+                class="button button_primary subscribe__button"
+                value="Sign Up"
+                id="submit-btn"
+              />
+              <input
+                type="reset"
                 class="button button_secondary subscribe__button"
-              >
-                Cancel
-              </button>
+                value="Cancel"
+                id="reset-btn"
+              />
             </div>
           </form>
         </div>
@@ -283,5 +294,6 @@
     <script src="js/cart.js"></script>
     <script src="js/bouquet-popup.js"></script>
     <script src="js/burger.js"></script>
+    <script src="js/subscribe.js"></script>
   </body>
 </html>
