@@ -1,6 +1,6 @@
 # Landing Page Project
 
-Floral Boutique - one page landing, responsive adaptive design,
+Floral Boutique - one page landing, responsive adaptive design
 Content header, 5 content sections, footer
 Burger menu on appear on 970px screen width
 Header and footer navigation links add with JavaScript
