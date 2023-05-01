@@ -14,6 +14,7 @@
 @import "./burger.css";
 @import "./subscribe.css";
 @import "./developer.css";
+@import "./to-top.css";
 
 *,
 *::before,
@@ -51,6 +52,10 @@ h5,
 h6 {
   color: #59313b;
   line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,

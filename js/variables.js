@@ -46,3 +46,6 @@ const filtersWraper = document.querySelectorAll(".filters__wrapper");
 const filtersSelect = document.querySelectorAll(".filters__select");
 const filtersListWrapers = document.querySelectorAll(".filters__list-wrapper");
 const filtersList = filters.querySelectorAll(".filters__list");
+
+// to top button
+const toTopBtn = document.querySelector(".to-top");
