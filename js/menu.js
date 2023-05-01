@@ -49,5 +49,9 @@ menuLinks.forEach((link) => {
       behavior: "smooth",
       block: "start",
     });
+
+    // set active section and set animation on active section
+    sections.forEach((section) => section.classList.remove("section_active"));
+    document.querySelector(id).classList.add("section_active");
   });
 });
