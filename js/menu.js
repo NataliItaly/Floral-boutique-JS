@@ -39,8 +39,8 @@ menuList.forEach((list) => {
 const menuLinks = document.querySelectorAll(`a[href^="#"]`);
 menuLinks.forEach((link) => {
   link.addEventListener("click", function (event) {
-    menuLinks.forEach((link) => link.classList.remove("menu__link_active"));
     event.preventDefault();
+    menuLinks.forEach((link) => link.classList.remove("menu__link_active"));
     // set active link
     const selectedId = link.getAttribute("href");
     const selectedLinks = document.querySelectorAll(`a[href^="${selectedId}"]`);
@@ -60,32 +60,11 @@ menuLinks.forEach((link) => {
 
 const sectionsArr = ["moods", "ideas", "catalog", "subscribe", "contacts"];
 const moods = document.getElementById(sectionsArr[0]);
-//moods.getBoundingClientRect();
-/* document.addEventListener("scroll", function (event) {
-  //console.log(event);
-  console.log(scrollY);
-  let scrollDown = document.scrollY;
-  sectionsArr.forEach((item) => {
-    let mainSection = document.getElementById(item);
-    console.log(mainSection);
-    let coordTop = mainSection.getBoundingClientRect().top;
-    let coordBottom = mainSection.getBoundingClientRect().height + coordTop;
-    //console.log(coordTop, coordBottom);
-    if (scrollY >= coordTop && scrollY <= coordBottom) {
-      document.getElementById(item).classList.add("section_active");
-      menuLinks.forEach((link) => {
-        link.classList.remove("menu__link_active");
-        if (link.getAttribute("href") === "#" + item) {
-          link.classList.add("menu__link_active");
-        }
-      });
-    }
-  });
-}); */
 
-function activeMenu() {
+function activeScroll() {
   let scrollFromTop = +window.pageYOffset;
   console.log("scrollFromTop " + scrollFromTop);
+  //let documentHeight = document.documentElement.scrollHeight;
   let documentHeight = Math.max(
     document.body.scrollHeight,
     document.documentElement.scrollHeight,
@@ -94,7 +73,7 @@ function activeMenu() {
     document.body.clientHeight,
     document.documentElement.clientHeight
   );
-  let windowHeight = +document.documentElement.clientHeight;
+  let windowHeight = document.documentElement.clientHeight;
   console.log("window " + windowHeight);
 
   console.log("documentHeight " + documentHeight);
@@ -116,10 +95,9 @@ function activeMenu() {
   for (let i = 0; i < sections.length; i++) {
     sections[i].classList.remove("section_active");
     if (
-      (sections[i + 1] &&
-        scrollFromTop >= sections[i].offsetTop - 250 &&
-        scrollFromTop <= sections[i + 1].offsetTop - 250) ||
-      (scrollFromTop >= sections[i].offsetTop - 250 && !sections[i + 1])
+      sections[i + 1] &&
+      scrollFromTop >= sections[i].offsetTop - 250 &&
+      scrollFromTop <= sections[i + 1].offsetTop - 250
     ) {
       console.log(sections[i].offsetTop);
       sections[i].classList.add("section_active");
@@ -132,10 +110,6 @@ function activeMenu() {
       });
     }
   }
-  /* sections.forEach((section, index) => {
-    console.log(section + " " + section.offsetTop);
-  }); */
-  //console.log(topHeight);
 }
-//activeMenu();
-window.addEventListener("scroll", activeMenu);
+
+window.addEventListener("scroll", activeScroll);

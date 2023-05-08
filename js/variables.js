@@ -1,6 +1,6 @@
 const BODY = document.body;
 const burgerBtn = document.querySelector(".burger");
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll(".section");
 const footer = document.querySelector("footer#contacts");
 
 // header and footer menu variables

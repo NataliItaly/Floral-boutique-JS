@@ -4,7 +4,6 @@
   left: 0;
   right: 0;
   z-index: 30;
-  /* position: relative; */
   padding: 25px 0 15px;
   background-color: #efe4ea;
 }
@@ -40,8 +39,7 @@
 }
 
 .header__icon:hover {
-  filter: invert(15%) sepia(53%) saturate(7207%) hue-rotate(270deg)
-    brightness(76%) contrast(90%);
+  opacity: 0.8;
 }
 
 .header__cart-count {
@@ -52,6 +50,12 @@
   align-items: center;
   background-color: #fff;
   border-radius: 50%;
+  transition: 0.4s;
+}
+
+.header__icon:hover .header__cart-count {
+  background-color: #a15669;
+  color: #fff;
 }
 
 @media (max-width: 970px) {
