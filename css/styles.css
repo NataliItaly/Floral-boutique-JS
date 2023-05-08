@@ -56,7 +56,6 @@ h6 {
 
 html {
   scroll-behavior: smooth;
-  overflow-y: scroll;
 }
 
 body {
@@ -69,7 +68,7 @@ body {
 }
 
 .block {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .visually-hidden {

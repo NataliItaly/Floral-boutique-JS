@@ -41,6 +41,7 @@ menuLinks.forEach((link) => {
   link.addEventListener("click", function (event) {
     event.preventDefault();
     menuLinks.forEach((link) => link.classList.remove("menu__link_active"));
+    console.log(menuLinks);
     // set active link
     const selectedId = link.getAttribute("href");
     const selectedLinks = document.querySelectorAll(`a[href^="${selectedId}"]`);
@@ -55,6 +56,11 @@ menuLinks.forEach((link) => {
     // set active section and set animation on active section
     sections.forEach((section) => section.classList.remove("section_active"));
     document.querySelector(id).classList.add("section_active");
+
+    // close menu if the adaptive design is activated
+    if (menuListHeader.classList.contains("menu__list_open")) {
+      removeOpenMenu();
+    }
   });
 });
 
@@ -63,8 +69,6 @@ const moods = document.getElementById(sectionsArr[0]);
 
 function activeScroll() {
   let scrollFromTop = +window.pageYOffset;
-  console.log("scrollFromTop " + scrollFromTop);
-  //let documentHeight = document.documentElement.scrollHeight;
   let documentHeight = Math.max(
     document.body.scrollHeight,
     document.documentElement.scrollHeight,

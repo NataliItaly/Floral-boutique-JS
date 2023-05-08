@@ -1,27 +1,43 @@
 # Landing Page Project
 
-Floral Boutique - one page landing, responsive adaptive design.
+-Floral Boutique - one page landing, responsive adaptive design.
 
-Content header, 5 content sections, footer.
+-Contents header, 5 sections, footer.
 
-Burger menu on appear on 970px screen width.
+-Burger menu on appear on 970px screen width.
 
-Header and footer navigation links add with JavaScript.
+-Header and footer navigation links add with JavaScript.
 
-Smooth scroll to sections.
+-Smooth scroll to sections.
 
-Scroll to top button appears on scroll down.
+-Scroll to top button appears on scroll down.
 
-Add class active on active section.
+-Add active class and highlight the active menu link.
 
-Flower animation on active section.
+-Add class active on active section.
 
-Slider in Ideas section.
+-Flower animation on active section.
 
-Catalog with dinamicly add items cards.
+-Slider in Ideas section.
 
-Possibility to filter items and add items to the shoping cart.
+-Catalog with dinamicly add items cards.
 
-Shoping cart contain choosen items and total price.
+-Possibility to filter items and add items to the shoping cart.
 
-Subscribe form validation.
+-Shoping cart contain choosen items and total price.
+
+-Subscribe form validation.
+
+#Contribution
+
+This is the open sourse project.
+
+Any comments or advices are wellcome.
+
+#List of files
+
+-index.html
+-css folder
+-js folder
+-img folder
+-README file
