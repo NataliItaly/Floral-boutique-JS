@@ -56,12 +56,7 @@ h6 {
 
 html {
   scroll-behavior: smooth;
-}
-
-html,
-body {
-  height: 100%;
-  height: fit-content;
+  overflow-y: scroll;
 }
 
 body {

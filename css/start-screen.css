@@ -1,5 +1,6 @@
 .start-screen {
   height: 350px;
+  margin-top: 80px;
   background-image: url("../img/start-screen-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;

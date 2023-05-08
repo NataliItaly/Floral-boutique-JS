@@ -1,6 +1,6 @@
 .menu__list {
   display: flex;
-  gap: 30px;
+  gap: 24px;
   margin-left: auto;
   transition: 0.5s;
 }
@@ -8,12 +8,19 @@
 .menu__link {
   color: #40393b;
   font-family: "Merriweather";
-  padding: 5px;
+  padding: 8px;
+  border-radius: 15px;
   transition: 0.4s;
 }
 
 .menu__link:hover {
   color: #7d4956;
+  background-color: #f1d7fa;
+}
+
+.menu__link_active {
+  background-color: #f1d7fa;
+  border: 1px solid #fff3fa;
 }
 
 @media (max-width: 970px) {
