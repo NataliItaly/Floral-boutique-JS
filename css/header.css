@@ -65,9 +65,6 @@
 }
 
 @media (max-width: 520px) {
-  .header {
-  }
-
   .header__icon {
     height: 30px;
   }
