@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(197, 141, 145, 0.6);
-  z-index: 100;
+  z-index: 300;
   overflow-y: scroll;
 }
 

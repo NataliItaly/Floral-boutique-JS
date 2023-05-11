@@ -64,7 +64,7 @@ function createPopup(index) {
     count--;
 
     totalArticles--;
-    cartTotalItems.textContent = setTotalItems(totalArticles);
+    setTotalItems(totalArticles);
     cartCount.textContent = totalArticles;
     bouquetPopupSub.disabled = count === 0 ? true : false;
 
@@ -78,7 +78,7 @@ function createPopup(index) {
     bouquetPopupCount.textContent = count;
 
     totalPrice -= bouquets[index].price;
-    cartTotalPrice.textContent = setTotalPrice(totalPrice);
+    setTotalPrice(totalPrice);
 
     setCartItem(index);
   });
@@ -90,7 +90,7 @@ function createPopup(index) {
   bouquetPopupAdd.addEventListener("click", function () {
     count++;
     totalArticles++;
-    cartTotalItems.textContent = setTotalItems(totalArticles);
+    setTotalItems(totalArticles);
     cartCount.textContent = totalArticles;
 
     let currentTotal = parseInt(bouquetPopupTotal.textContent);
@@ -100,7 +100,7 @@ function createPopup(index) {
     bouquetPopupCount.textContent = count;
 
     totalPrice += bouquets[index].price;
-    cartTotalPrice.textContent = setTotalPrice(totalPrice);
+    setTotalPrice(totalPrice);
 
     bouquets[index].quantity++;
     bouquets[index].inCart = true;

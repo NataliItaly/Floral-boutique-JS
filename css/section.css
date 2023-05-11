@@ -11,7 +11,7 @@
   top: -20px;
   right: 150px;
   background: center / contain no-repeat url(./../img/flower-icon.png);
-  animation: flower-move 2s forwards linear 0.5s infinite;
+  animation: flower-move 2s forwards linear 0.5s;
   opacity: 0;
   transition: 0.6s;
   z-index: 200;
@@ -91,6 +91,7 @@
 
 .section__ideas {
   background-color: #e8caf3;
+  padding-bottom: 0;
 }
 
 .section__title {

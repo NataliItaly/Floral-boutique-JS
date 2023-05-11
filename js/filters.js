@@ -21,7 +21,6 @@ function setOpenState(elem) {
 function openFilter(event) {
   event.preventDefault();
   if (event.target.classList.contains("filters__select")) {
-    console.log(event.target);
     setOpenState(event.target);
   }
 }
@@ -32,19 +31,12 @@ filters.addEventListener("click", openFilter);
 
 filtersList.forEach((filter) => {
   filter.addEventListener("click", function (event) {
-    /* if (filter.dataset.category === "price-filter") {
-      let option = event.target.dataset.value;
-      console.log(option);
-    } */
-
     if (event.target.classList.contains("filters__option")) {
       let option = event.target.dataset.value;
-      console.log(option);
       [...catalog.children].forEach((child) => child.remove());
 
       bouquets.forEach((bouquet, index) => {
         if (bouquet.tags.includes(option)) {
-          console.log(bouquet.tags);
           catalog.append(createSingleCard(index));
         } else if (filter.dataset.category === "price-filter") {
           if (bouquet.price < 30 && option === "low-price") {

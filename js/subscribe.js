@@ -2,7 +2,6 @@
 
 submitBtn.addEventListener("click", function (event) {
   event.preventDefault();
-  subscribeInputs.forEach((input) => console.log(input.checkValidity()));
   let nameValid = nameInput.checkValidity();
   let passwordValid = passwordInput.checkValidity();
   let passwordrepeatValid = passwordRepeatInput.checkValidity();

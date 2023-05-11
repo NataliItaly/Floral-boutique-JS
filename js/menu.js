@@ -41,7 +41,7 @@ menuLinks.forEach((link) => {
   link.addEventListener("click", function (event) {
     event.preventDefault();
     menuLinks.forEach((link) => link.classList.remove("menu__link_active"));
-    console.log(menuLinks);
+
     // set active link
     const selectedId = link.getAttribute("href");
     const selectedLinks = document.querySelectorAll(`a[href^="${selectedId}"]`);
@@ -78,14 +78,8 @@ function activeScroll() {
     document.documentElement.clientHeight
   );
   let windowHeight = document.documentElement.clientHeight;
-  console.log("window " + windowHeight);
-
-  console.log("documentHeight " + documentHeight);
   let totalHeight = windowHeight + scrollFromTop;
-  console.log("totalHeight " + totalHeight);
-  console.log(
-    "totalHeight === documentHeight :" + totalHeight <= documentHeight
-  );
+
   if (totalHeight >= documentHeight) {
     sections.forEach((section) => section.classList.remove("section_active"));
     footer.classList.add("section_active");
@@ -103,7 +97,6 @@ function activeScroll() {
       scrollFromTop >= sections[i].offsetTop - 250 &&
       scrollFromTop <= sections[i + 1].offsetTop - 250
     ) {
-      console.log(sections[i].offsetTop);
       sections[i].classList.add("section_active");
       let sectionId = sections[i].getAttribute("id");
       menuLinks.forEach((link) => {
