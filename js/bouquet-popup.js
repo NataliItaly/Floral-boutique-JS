@@ -148,7 +148,6 @@ function createPopup(index) {
   catalog.append(bouquetPopup);
 
   BODY.classList.add("block");
-  bouquetPopupInner.classList.add("bo");
 }
 
 // function return a string with price and add $ sign
